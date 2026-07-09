@@ -10,7 +10,7 @@ import { EmptyState, Panel, PanelHeader } from "@/components/ui";
 
 export default function RfpDetailPage({ params }: { params: Promise<{ rfpId: string }> }) {
   const { rfpId } = use(params);
-  const { loading, rfps, crmAccounts, personas, work, qaPairs, generateForRfp } = useAppState();
+  const { loading, rfps, crmAccounts, personas, work, generateForRfp } = useAppState();
 
   const rfp = rfps.find((r) => r.id === rfpId);
   const workState = work[rfpId];
@@ -92,7 +92,7 @@ export default function RfpDetailPage({ params }: { params: Promise<{ rfpId: str
         </div>
 
         <div className="lg:sticky lg:top-6 lg:self-start">
-          <WorkflowRail rfp={rfp} workState={workState} adviser={adviser} qaPairs={qaPairs} />
+          <WorkflowRail rfp={rfp} workState={workState} adviser={adviser} />
         </div>
       </div>
     </div>

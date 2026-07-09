@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { ComplianceFinding, DraftAnswer, RfpQuestion } from "@/lib/types";
 import { Button, ProvenanceChip, SeverityPill } from "@/components/ui";
 import { wordDiff } from "@/lib/diff";
@@ -28,10 +28,8 @@ export function QuestionCard({
 
   const activeFindings = findings.filter((f) => !f.resolved && !(f.severity === "Flag" && f.acknowledged));
 
-  const diffSegments = useMemo(() => {
-    if (!answer?.goldenText || answer.tier !== 2) return null;
-    return wordDiff(answer.goldenText, answer.text);
-  }, [answer?.goldenText, answer?.text, answer?.tier]);
+  const diffSegments =
+    answer?.goldenText && answer.tier === 2 ? wordDiff(answer.goldenText, answer.text) : null;
 
   return (
     <article

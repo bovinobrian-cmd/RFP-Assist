@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Persona, QaPair, Rfp } from "@/lib/types";
+import type { Persona, Rfp } from "@/lib/types";
 import type { RfpWorkState } from "@/state/AppStateContext";
 import { useAppState } from "@/state/AppStateContext";
 import { Button, Panel, PanelHeader, SeverityPill } from "@/components/ui";
@@ -15,12 +15,10 @@ export function WorkflowRail({
   rfp,
   workState,
   adviser,
-  qaPairs,
 }: {
   rfp: Rfp;
   workState: RfpWorkState;
   adviser: Persona | undefined;
-  qaPairs: QaPair[];
 }) {
   const { runCompliance, markExported } = useAppState();
   const [exporting, setExporting] = useState<"docx" | "pdf" | null>(null);

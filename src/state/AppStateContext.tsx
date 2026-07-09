@@ -395,32 +395,32 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
 
   const actionEnrichmentCard = useCallback(
     (cardId: string, action: "accepted" | "dismissed", detail?: { editedAnswer?: string; dismissReason?: string; actor: string }) => {
-      setEnrichmentCards((prev) => {
-        const card = prev.find((c) => c.id === cardId);
-        if (!card) return prev;
-        if (action === "accepted") {
-          const item: ReviewItem = {
-            id: uid("rev"),
-            qaId: card.qaId,
-            title: card.title,
-            proposedQuestion: card.proposedQuestion ?? "",
-            proposedAnswer: detail?.editedAnswer ?? card.proposedAnswer ?? "",
-            proposedDataPoints: card.proposedDataPoints ?? [],
-            assetClass: card.qaId?.startsWith("gs-eq") ? "global_equity" : card.qaId?.startsWith("gs-ma") ? "multi_asset" : card.qaId?.startsWith("gs-fw") ? "firmwide" : "fixed_income",
-            submittedBy: detail?.actor ?? "Data Steward",
-            submittedDate: new Date().toISOString().slice(0, 10),
-            origin: "enrichment",
-            originDetail: `Smart Enrichment (${card.kind}) — ${card.provenance.sampleSize}`,
-            status: "pending_review",
-          };
-          setReviewQueue((q) => [item, ...q]);
-        }
-        return prev.map((c) =>
+      const card = enrichmentCards.find((c) => c.id === cardId);
+      if (!card) return;
+      if (action === "accepted") {
+        const item: ReviewItem = {
+          id: uid("rev"),
+          qaId: card.qaId,
+          title: card.title,
+          proposedQuestion: card.proposedQuestion ?? "",
+          proposedAnswer: detail?.editedAnswer ?? card.proposedAnswer ?? "",
+          proposedDataPoints: card.proposedDataPoints ?? [],
+          assetClass: card.qaId?.startsWith("gs-eq") ? "global_equity" : card.qaId?.startsWith("gs-ma") ? "multi_asset" : card.qaId?.startsWith("gs-fw") ? "firmwide" : "fixed_income",
+          submittedBy: detail?.actor ?? "Data Steward",
+          submittedDate: new Date().toISOString().slice(0, 10),
+          origin: "enrichment",
+          originDetail: `Smart Enrichment (${card.kind}) — ${card.provenance.sampleSize}`,
+          status: "pending_review",
+        };
+        setReviewQueue((q) => [item, ...q]);
+      }
+      setEnrichmentCards((prev) =>
+        prev.map((c) =>
           c.id === cardId ? { ...c, status: action, dismissReason: detail?.dismissReason ?? null } : c
-        );
-      });
+        )
+      );
     },
-    []
+    [enrichmentCards]
   );
 
   const setGapStatus = useCallback((gapId: string, status: CoverageGap["status"]) => {
