@@ -1,0 +1,25 @@
+[
+  {
+    "id": "adv-chen",
+    "name": "Margaret Chen",
+    "role": "adviser",
+    "title": "Client Adviser — Institutional Fixed Income",
+    "initials": "MC",
+    "toneProfile": "Precise and data-forward. Short declarative sentences, quantified claims, minimal adjectives."
+  },
+  {
+    "id": "adv-whitmore",
+    "name": "Daniel Whitmore",
+    "role": "adviser",
+    "title": "Client Adviser — Endowments & Foundations",
+    "initials": "DW",
+    "toneProfile": "Warm and narrative. Leads with partnership language and client outcomes before the technical detail."
+  },
+  {
+    "id": "stw-sharma",
+    "name": "Priya Sharma",
+    "role": "steward",
+    "title": "Data Steward — RFP Content Governance",
+    "initials": "PS"
+  }
+]

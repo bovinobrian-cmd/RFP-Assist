@@ -1,0 +1,147 @@
+[
+  {
+    "id": "rfp-scpers",
+    "issuer": "State of Columbia Public Employees' Retirement System",
+    "shortName": "SCPERS",
+    "mandate": "Core Fixed Income — Investment Manager Search",
+    "assetClass": "fixed_income",
+    "vehicle": "Separate account",
+    "aum": "$18.4B plan assets",
+    "mandateSize": "$650M",
+    "deadline": "2026-07-24",
+    "received": "2026-07-07",
+    "consultant": "Meridian Investment Consulting",
+    "contact": "rfp@meridianconsulting.example — Anna Kowalski, Senior Consultant",
+    "channel": "Consultant portal (Meridian)",
+    "crmAccountId": "crm-scpers",
+    "assignedAdviserId": "adv-chen",
+    "status": "new",
+    "sections": [
+      {
+        "id": "sec-a",
+        "title": "A. Organization & Governance",
+        "questions": [
+          { "id": "q-a1", "sectionId": "sec-a", "number": "A.1", "text": "Provide an overview of your firm, including its history, ownership structure, and principal lines of business.", "contextKey": "firmwide.org.overview", "matchedGoldenId": "gs-fw-001", "matchConfidence": 0.93 },
+          { "id": "q-a2", "sectionId": "sec-a", "number": "A.2", "text": "State your firm's total assets under management, including the breakdown by asset class and client type.", "contextKey": "firmwide.org.aum", "matchedGoldenId": "gs-fw-002", "matchConfidence": 0.95 },
+          { "id": "q-a3", "sectionId": "sec-a", "number": "A.3", "text": "Describe any significant organizational changes, ownership changes, or senior personnel turnover during the past three years.", "contextKey": "firmwide.org.changes", "matchedGoldenId": "gs-fw-003", "matchConfidence": 0.91 },
+          { "id": "q-a4", "sectionId": "sec-a", "number": "A.4", "text": "Disclose any material litigation, regulatory investigations, or enforcement actions involving your firm during the past five years.", "contextKey": "firmwide.legal.litigation", "matchedGoldenId": "gs-fw-004", "matchConfidence": 0.94 },
+          { "id": "q-a5", "sectionId": "sec-a", "number": "A.5", "text": "Describe the firm's insurance coverage, including errors and omissions and fiduciary liability coverage.", "contextKey": "firmwide.legal.insurance", "matchedGoldenId": "gs-fw-005", "matchConfidence": 0.92 }
+        ]
+      },
+      {
+        "id": "sec-b",
+        "title": "B. Investment Team",
+        "questions": [
+          { "id": "q-b1", "sectionId": "sec-b", "number": "B.1", "text": "Describe the investment team responsible for the proposed core fixed income strategy, including size, structure, and experience.", "contextKey": "core_bond.team.overview", "matchedGoldenId": "gs-fi-001", "matchConfidence": 0.9 },
+          { "id": "q-b2", "sectionId": "sec-b", "number": "B.2", "text": "Provide biographies of the key investment professionals who would be responsible for this mandate.", "contextKey": "core_bond.team.bios", "matchedGoldenId": "gs-fi-002", "matchConfidence": 0.93 },
+          { "id": "q-b3", "sectionId": "sec-b", "number": "B.3", "text": "Describe your compensation structure and how the firm retains key investment professionals.", "contextKey": "firmwide.people.compensation", "matchedGoldenId": "gs-fw-006", "matchConfidence": 0.88 },
+          { "id": "q-b4", "sectionId": "sec-b", "number": "B.4", "text": "List all portfolio manager departures from the core fixed income team during the past five years, including the reason for each departure and the succession arrangements.", "contextKey": "core_bond.team.departures", "matchedGoldenId": null, "matchConfidence": 0.34 }
+        ]
+      },
+      {
+        "id": "sec-c",
+        "title": "C. Investment Philosophy & Process",
+        "questions": [
+          { "id": "q-c1", "sectionId": "sec-c", "number": "C.1", "text": "Describe your investment philosophy for core fixed income.", "contextKey": "core_bond.philosophy", "matchedGoldenId": "gs-fi-003", "matchConfidence": 0.94 },
+          { "id": "q-c2", "sectionId": "sec-c", "number": "C.2", "text": "Describe your investment process, including idea generation and decision-making authority.", "contextKey": "core_bond.process", "matchedGoldenId": "gs-fi-004", "matchConfidence": 0.92 },
+          { "id": "q-c3", "sectionId": "sec-c", "number": "C.3", "text": "How do you manage duration and yield curve positioning relative to the benchmark?", "contextKey": "core_bond.duration", "matchedGoldenId": "gs-fi-005", "matchConfidence": 0.95 },
+          { "id": "q-c4", "sectionId": "sec-c", "number": "C.4", "text": "Describe your credit research capabilities and process.", "contextKey": "core_bond.credit_research", "matchedGoldenId": "gs-fi-006", "matchConfidence": 0.93 },
+          { "id": "q-c5", "sectionId": "sec-c", "number": "C.5", "text": "How are sector allocation decisions made and implemented?", "contextKey": "core_bond.sector_allocation", "matchedGoldenId": "gs-fi-007", "matchConfidence": 0.91 }
+        ]
+      },
+      {
+        "id": "sec-d",
+        "title": "D. Risk Management",
+        "questions": [
+          { "id": "q-d1", "sectionId": "sec-d", "number": "D.1", "text": "Describe your risk management framework for fixed income portfolios.", "contextKey": "core_bond.risk.framework", "matchedGoldenId": "gs-fi-008", "matchConfidence": 0.94 },
+          { "id": "q-d2", "sectionId": "sec-d", "number": "D.2", "text": "How do you manage tracking error, and what is the expected range for this strategy?", "contextKey": "core_bond.risk.tracking_error", "matchedGoldenId": "gs-fi-009", "matchConfidence": 0.95 },
+          { "id": "q-d3", "sectionId": "sec-d", "number": "D.3", "text": "Describe how you monitor and manage liquidity risk in the portfolio.", "contextKey": "core_bond.risk.liquidity", "matchedGoldenId": "gs-fi-010", "matchConfidence": 0.92 },
+          { "id": "q-d4", "sectionId": "sec-d", "number": "D.4", "text": "Describe your use of derivatives and how counterparty risk is managed.", "contextKey": "core_bond.risk.derivatives", "matchedGoldenId": "gs-fi-011", "matchConfidence": 0.9 }
+        ]
+      },
+      {
+        "id": "sec-e",
+        "title": "E. Performance & Fees",
+        "questions": [
+          { "id": "q-e1", "sectionId": "sec-e", "number": "E.1", "text": "Provide the strategy's composite performance for the trailing 1-, 3-, and 5-year periods versus the benchmark, net of fees.", "contextKey": "core_bond.performance.composite", "matchedGoldenId": "gs-fi-012", "matchConfidence": 0.81 },
+          { "id": "q-e2", "sectionId": "sec-e", "number": "E.2", "text": "Describe your performance attribution process and how results are communicated to clients.", "contextKey": "core_bond.performance.attribution", "matchedGoldenId": "gs-fi-012", "matchConfidence": 0.9 },
+          { "id": "q-e3", "sectionId": "sec-e", "number": "E.3", "text": "Provide your proposed fee schedule for this mandate.", "contextKey": "core_bond.fees.schedule", "matchedGoldenId": "gs-fw-012", "matchConfidence": 0.72 },
+          { "id": "q-e4", "sectionId": "sec-e", "number": "E.4", "text": "Provide three client references for accounts most similar to this mandate in size and structure, including contact information and length of relationship.", "contextKey": "core_bond.references", "matchedGoldenId": null, "matchConfidence": 0.28 }
+        ]
+      },
+      {
+        "id": "sec-f",
+        "title": "F. Operations, Compliance & Reporting",
+        "questions": [
+          { "id": "q-f1", "sectionId": "sec-f", "number": "F.1", "text": "Describe your compliance program, code of ethics, and personal trading policies.", "contextKey": "firmwide.compliance.program", "matchedGoldenId": "gs-fw-007", "matchConfidence": 0.95 },
+          { "id": "q-f2", "sectionId": "sec-f", "number": "F.2", "text": "Describe your trading capabilities and approach to best execution.", "contextKey": "firmwide.ops.trading", "matchedGoldenId": "gs-fw-008", "matchConfidence": 0.93 },
+          { "id": "q-f3", "sectionId": "sec-f", "number": "F.3", "text": "Describe your business continuity, disaster recovery, and cybersecurity programs.", "contextKey": "firmwide.ops.bcp", "matchedGoldenId": "gs-fw-009", "matchConfidence": 0.94 },
+          { "id": "q-f4", "sectionId": "sec-f", "number": "F.4", "text": "Describe your client reporting capabilities, including standard reporting frequency and available customization.", "contextKey": "firmwide.service.reporting", "matchedGoldenId": "gs-fw-010", "matchConfidence": 0.91 }
+        ]
+      },
+      {
+        "id": "sec-g",
+        "title": "G. ESG",
+        "questions": [
+          { "id": "q-g1", "sectionId": "sec-g", "number": "G.1", "text": "Describe your firm's approach to environmental, social, and governance (ESG) considerations.", "contextKey": "firmwide.esg.policy", "matchedGoldenId": "gs-fw-011", "matchConfidence": 0.93 },
+          { "id": "q-g2", "sectionId": "sec-g", "number": "G.2", "text": "How is ESG integrated into your fixed income investment process?", "contextKey": "core_bond.esg.integration", "matchedGoldenId": "gs-fi-013", "matchConfidence": 0.92 },
+          { "id": "q-g3", "sectionId": "sec-g", "number": "G.3", "text": "Describe your climate scenario analysis capabilities and any TCFD-aligned reporting you can provide at the mandate level.", "contextKey": "core_bond.esg.climate_reporting", "matchedGoldenId": null, "matchConfidence": 0.31 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rfp-northfield",
+    "issuer": "Northfield University Endowment",
+    "shortName": "Northfield",
+    "mandate": "Global Equity — Manager Consolidation RFP",
+    "assetClass": "global_equity",
+    "vehicle": "Separate account",
+    "aum": "$2.1B endowment",
+    "mandateSize": "$275M",
+    "deadline": "2026-08-14",
+    "received": "2026-07-08",
+    "consultant": null,
+    "contact": "investments@northfield.example — Office of Investments",
+    "channel": "Direct — client email",
+    "crmAccountId": "crm-northfield",
+    "assignedAdviserId": "adv-whitmore",
+    "status": "new",
+    "sections": [
+      {
+        "id": "nsec-o",
+        "title": "1. Organization",
+        "questions": [
+          { "id": "nq-o1", "sectionId": "nsec-o", "number": "1.1", "text": "Provide a brief overview of your firm, its ownership, and lines of business.", "contextKey": "firmwide.org.overview", "matchedGoldenId": "gs-fw-001", "matchConfidence": 0.92 },
+          { "id": "nq-o2", "sectionId": "nsec-o", "number": "1.2", "text": "State total firm assets under management and the client-type mix.", "contextKey": "firmwide.org.aum", "matchedGoldenId": "gs-fw-002", "matchConfidence": 0.93 }
+        ]
+      },
+      {
+        "id": "nsec-t",
+        "title": "2. Team & Investment Process",
+        "questions": [
+          { "id": "nq-t1", "sectionId": "nsec-t", "number": "2.1", "text": "Describe the investment team responsible for your global equity strategy.", "contextKey": "global_select_equity.team.overview", "matchedGoldenId": "gs-eq-001", "matchConfidence": 0.91 },
+          { "id": "nq-t2", "sectionId": "nsec-t", "number": "2.2", "text": "Describe your investment philosophy for global equities.", "contextKey": "global_select_equity.philosophy", "matchedGoldenId": "gs-eq-002", "matchConfidence": 0.93 },
+          { "id": "nq-t3", "sectionId": "nsec-t", "number": "2.3", "text": "Describe the stability of the investment team and any turnover among senior members.", "contextKey": "global_select_equity.team.stability", "matchedGoldenId": "gs-eq-003", "matchConfidence": 0.92 },
+          { "id": "nq-t4", "sectionId": "nsec-t", "number": "2.4", "text": "Describe your equity research process and how ideas enter the portfolio.", "contextKey": "global_select_equity.process", "matchedGoldenId": "gs-eq-004", "matchConfidence": 0.9 }
+        ]
+      },
+      {
+        "id": "nsec-p",
+        "title": "3. Performance & Fees",
+        "questions": [
+          { "id": "nq-p1", "sectionId": "nsec-p", "number": "3.1", "text": "Provide composite performance for the strategy over standard trailing periods, net of fees.", "contextKey": "global_select_equity.performance.composite", "matchedGoldenId": "gs-eq-004", "matchConfidence": 0.79 },
+          { "id": "nq-p2", "sectionId": "nsec-p", "number": "3.2", "text": "Provide your standard fee schedule for a global equity separate account of this size.", "contextKey": "global_select_equity.fees.schedule", "matchedGoldenId": "gs-eq-005", "matchConfidence": 0.94 }
+        ]
+      },
+      {
+        "id": "nsec-e",
+        "title": "4. ESG & Reporting",
+        "questions": [
+          { "id": "nq-e1", "sectionId": "nsec-e", "number": "4.1", "text": "How is ESG integrated into your global equity investment process?", "contextKey": "global_select_equity.esg.integration", "matchedGoldenId": "gs-eq-006", "matchConfidence": 0.91 },
+          { "id": "nq-e2", "sectionId": "nsec-e", "number": "4.2", "text": "Describe your ability to provide daily position-level data feeds and a real-time reporting portal for the endowment's internal risk system.", "contextKey": "global_select_equity.reporting.data_feed", "matchedGoldenId": null, "matchConfidence": 0.3 }
+        ]
+      }
+    ]
+  }
+]

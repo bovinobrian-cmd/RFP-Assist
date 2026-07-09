@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "../theme/theme.css";
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Word-level diff rendering (tier-2 tone adjustment vs. golden source) */
+.diff-added {
+  background: var(--color-accent-tint);
+  color: var(--color-accent-deep);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.diff-removed {
+  background: var(--color-critical-tint);
+  color: var(--color-critical);
+  text-decoration: line-through;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* Compliance highlight inside answer text */
+.finding-block {
+  background: var(--color-critical-tint);
+  border-bottom: 2px solid var(--color-critical);
+  border-radius: 2px;
+}
+.finding-flag {
+  background: var(--color-caution-tint);
+  border-bottom: 2px solid var(--color-caution);
+  border-radius: 2px;
+}

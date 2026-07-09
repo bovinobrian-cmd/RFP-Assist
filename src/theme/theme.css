@@ -1,0 +1,57 @@
+/* ---------------------------------------------------------------------------
+   THE single theme file. Every brand token used anywhere in the app lives
+   here — components must reference these tokens (via Tailwind utilities or
+   var(--…)) and never hardcode colors, fonts, or radii.
+
+   Palette: JPMAM-aligned institutional look — near-black / white foundation,
+   J.P. Morgan brown accent, generous whitespace, quiet supporting greys.
+--------------------------------------------------------------------------- */
+
+@theme {
+  /* Foundation */
+  --color-ink: #16130f; /* near-black, primary text */
+  --color-ink-soft: #4d463d; /* secondary text */
+  --color-ink-faint: #8a8177; /* tertiary text, metadata */
+  --color-paper: #ffffff; /* page background */
+  --color-canvas: #f7f5f2; /* app background, warm off-white */
+  --color-hairline: #e6e1da; /* borders, dividers */
+  --color-hairline-strong: #cfc7bc;
+
+  /* Brand accent — J.P. Morgan brown */
+  --color-accent: #7a5c3e;
+  --color-accent-deep: #5d4530;
+  --color-accent-tint: #f1eae1;
+  --color-accent-wash: #faf7f3;
+
+  /* Semantic */
+  --color-positive: #2e6b4f;
+  --color-positive-tint: #e8f1ec;
+  --color-caution: #9a6d1b;
+  --color-caution-tint: #f9f1e0;
+  --color-critical: #a03123;
+  --color-critical-tint: #f9e9e6;
+  --color-info: #33566e;
+  --color-info-tint: #e9eff4;
+
+  /* Provenance tiers */
+  --color-tier1: #33566e; /* adviser history — steel blue */
+  --color-tier1-tint: #e9eff4;
+  --color-tier2: #7a5c3e; /* tone adjusted — brand brown */
+  --color-tier2-tint: #f1eae1;
+  --color-tier3: #4d5a4f; /* golden default — sage */
+  --color-tier3-tint: #eaeeeb;
+  --color-tier4: #a03123; /* needs content — red */
+  --color-tier4-tint: #f9e9e6;
+
+  /* Typography */
+  --font-display: Georgia, "Times New Roman", Times, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui,
+    sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Shape & elevation */
+  --radius-card: 0.5rem;
+  --radius-chip: 0.25rem;
+  --shadow-card: 0 1px 2px rgb(22 19 15 / 0.05), 0 1px 3px rgb(22 19 15 / 0.06);
+  --shadow-raised: 0 4px 16px rgb(22 19 15 / 0.1);
+}

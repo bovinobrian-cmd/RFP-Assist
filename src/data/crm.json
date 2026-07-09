@@ -1,0 +1,31 @@
+[
+  {
+    "id": "crm-scpers",
+    "name": "State of Columbia Public Employees' Retirement System",
+    "type": "prospect",
+    "segment": "US Public Pension",
+    "relationshipOwner": "Margaret Chen",
+    "aumWithFirm": null,
+    "productsHeld": [],
+    "lastInteraction": "2026-03-12 — Meridian consultant roundtable; SCPERS CIO attended core fixed income session.",
+    "notes": "Past prospect. Finalist in 2023 intermediate credit search; mandate awarded to incumbent on fee. Board has since adopted new fixed income structure with a dedicated core allocation. Consultant relationship (Meridian) is strong.",
+    "pastRfps": [
+      { "year": 2023, "mandate": "Intermediate Credit — $400M", "outcome": "lost" }
+    ]
+  },
+  {
+    "id": "crm-northfield",
+    "name": "Northfield University Endowment",
+    "type": "client",
+    "segment": "Endowment & Foundation",
+    "relationshipOwner": "Daniel Whitmore",
+    "aumWithFirm": "$310M",
+    "productsHeld": ["US Core Bond Fund — $180M", "Multi-Asset Income — $130M"],
+    "lastInteraction": "2026-06-18 — Annual portfolio review with investment committee; discussed global equity consolidation.",
+    "notes": "Client since 2019. Investment committee is consolidating external equity managers from five to two; this RFP covers the global equity sleeve. Strong service relationship; reporting responsiveness cited as a differentiator at the June review.",
+    "pastRfps": [
+      { "year": 2019, "mandate": "US Core Bond — $150M", "outcome": "won" },
+      { "year": 2022, "mandate": "Multi-Asset Income — $120M", "outcome": "won" }
+    ]
+  }
+]

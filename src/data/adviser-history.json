@@ -1,0 +1,57 @@
+[
+  {
+    "id": "hist-chen-001",
+    "adviserId": "adv-chen",
+    "contextKey": "core_bond.performance.composite",
+    "questionText": "Provide the strategy's composite performance for the trailing 1-, 3-, and 5-year periods versus the benchmark.",
+    "answerText": "The Core Bond composite returned 5.1% over the trailing one year, 4.2% annualized over three years, and 3.9% annualized over five years, net of fees, outperforming the Bloomberg U.S. Aggregate Index by 60, 85, and 90 basis points of excess return respectively. Excess return has been positive in 9 of the past 10 calendar years, driven primarily by sector allocation and security selection rather than duration timing. Full GIPS-compliant composite presentations are provided in the appendix.",
+    "sourceRfp": "Great Lakes Municipal Employees' Pension — Core Fixed Income Search (2025)",
+    "clientName": "Great Lakes Municipal Employees' Pension",
+    "approvedDate": "2025-09-30",
+    "outcome": "won"
+  },
+  {
+    "id": "hist-chen-002",
+    "adviserId": "adv-chen",
+    "contextKey": "core_bond.fees.schedule",
+    "questionText": "Provide your proposed fee schedule for this mandate.",
+    "answerText": "For a core bond separate account of this size, the proposed schedule is 24 basis points on the first $250 million and 19 basis points on assets above $250 million, billed quarterly in arrears on average market value. We guarantee this fee schedule will remain fixed for the life of the mandate. The schedule includes portfolio management, standard and customized reporting, and named client service coverage; custody is contracted separately by the plan.",
+    "sourceRfp": "Harbor County Retirement Board — Core Fixed Income Search (2025)",
+    "clientName": "Harbor County Retirement Board",
+    "approvedDate": "2025-05-16",
+    "outcome": "won"
+  },
+  {
+    "id": "hist-chen-003",
+    "adviserId": "adv-chen",
+    "contextKey": "core_bond.transition.management",
+    "questionText": "Describe your approach to transitioning assets from an incumbent manager.",
+    "answerText": "Transitions are planned security-by-security before funding. The team analyzes the legacy portfolio against target positioning, retains holdings consistent with the strategy to minimize turnover cost, and executes the balance over a defined window using the firm's trading desks. Clients receive a pre-transition cost estimate and a post-transition report reconciling estimated to realized costs.",
+    "sourceRfp": "Great Lakes Municipal Employees' Pension — Core Fixed Income Search (2025)",
+    "clientName": "Great Lakes Municipal Employees' Pension",
+    "approvedDate": "2025-09-30",
+    "outcome": "won"
+  },
+  {
+    "id": "hist-dw-001",
+    "adviserId": "adv-whitmore",
+    "contextKey": "global_select_equity.performance.composite",
+    "questionText": "Provide composite performance for the strategy over standard trailing periods.",
+    "answerText": "Performance is where partnership meets proof, so we share it plainly. The Global Select Equity composite returned 11.4% over the trailing one year, 9.8% annualized over three years, and 10.6% annualized over five years, net of fees, versus 9.9%, 8.1%, and 9.2% for the MSCI World Index. We would emphasize the pattern behind the numbers: excess return has come principally from stock selection, which is what our clients hire us for. Past performance is not a guarantee of future results; GIPS-compliant presentations are included in the appendix.",
+    "sourceRfp": "Carroll Family Foundation — Global Equity Manager Search (2024)",
+    "clientName": "Carroll Family Foundation",
+    "approvedDate": "2024-11-20",
+    "outcome": "won"
+  },
+  {
+    "id": "hist-dw-002",
+    "adviserId": "adv-whitmore",
+    "contextKey": "global_select_equity.service.model",
+    "questionText": "Describe the client service model for endowment relationships.",
+    "answerText": "Every endowment relationship is supported by a named team — a senior client adviser, a client account manager, and a portfolio specialist — who attend investment committee meetings, prepare board-ready materials, and remain accessible between quarterly cycles. We think of ourselves as an extension of the investment office, and our longest endowment relationships have spanned multiple committee generations.",
+    "sourceRfp": "Lakeside College Endowment — Global Equity Search (2023)",
+    "clientName": "Lakeside College Endowment",
+    "approvedDate": "2023-08-14",
+    "outcome": "won"
+  }
+]

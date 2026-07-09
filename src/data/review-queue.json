@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rev-seed-001",
+    "qaId": "gs-fi-010",
+    "title": "Liquidity risk answer — add liquidation stress cadence detail",
+    "proposedQuestion": "Describe how you monitor and manage liquidity risk in the portfolio.",
+    "proposedAnswer": "Every security is assigned a liquidity score at purchase, refreshed daily from dealer quotes, trade volumes, and issue characteristics. The portfolio is managed to defined minimums for highly liquid assets, and concentration limits cap exposure to less liquid structures. The risk team runs monthly liquidation stress tests estimating time-to-cash under normal and stressed conditions for the full portfolio, with results reviewed by the investment policy committee and summarized in quarterly client reporting. For client-specific needs — such as benefit payment schedules — liquidity ladders can be tailored to the mandate.",
+    "proposedDataPoints": [],
+    "assetClass": "fixed_income",
+    "submittedBy": "Priya Sharma",
+    "submittedDate": "2026-07-06",
+    "origin": "editor",
+    "originDetail": "Steward edit — added client-reporting linkage requested by consultant relations",
+    "status": "pending_review"
+  }
+]

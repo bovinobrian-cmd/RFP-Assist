@@ -1,0 +1,1848 @@
+[
+  {
+    "id": "gs-fw-001",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Provide an overview of your firm, including history, ownership structure, and lines of business.",
+    "question_variants": [
+      "Give a brief history and overview of your organization.",
+      "Describe your firm's ownership and corporate structure."
+    ],
+    "answer_text": "J.P. Morgan Asset Management is the investment management business of JPMorgan Chase & Co., a publicly listed financial holding company (NYSE: JPM). The asset management business traces its roots to 1863 and today serves institutions, financial intermediaries, and individual investors worldwide. Investment capabilities span fixed income, equities, multi-asset solutions, and alternatives, delivered through dedicated investment teams supported by shared research, risk, and trading platforms. The firm's ownership has been stable for decades, and asset management remains a strategically core business for the parent company.",
+    "answer_summary": "Firm history, ownership, and lines of business overview.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-05-04",
+    "review_by": "2027-05-04",
+    "supersedes": "gs-fw-001@v3",
+    "usage_stats": {
+      "retrievals_90d": 41,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 14,
+      "win_rate": 0.49
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-05-04",
+        "author": "Priya Sharma",
+        "note": "Annual review; no substantive change."
+      },
+      {
+        "version": 3,
+        "date": "2025-04-28",
+        "author": "Priya Sharma",
+        "note": "Refreshed lines-of-business description."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-002",
+    "version": 6,
+    "status": "approved",
+    "question_canonical": "State your firm's total assets under management and the breakdown by asset class and client type.",
+    "question_variants": [
+      "What are your firm's total AUM and client mix?"
+    ],
+    "answer_text": "Firmwide assets under management were $2.9 trillion as of December 31, 2024, of which $780 billion was managed in fixed income strategies, $910 billion in equities, $650 billion in multi-asset solutions and $560 billion in liquidity and alternatives. Institutional clients — pension plans, insurers, sovereigns, endowments and foundations — represent approximately 46% of assets under management. Detailed breakdowns by strategy and vehicle are available in the appendix and are updated quarterly.",
+    "answer_summary": "Firmwide AUM and breakdown by asset class and client type.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [
+      "aum_figures"
+    ],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Firmwide AUM",
+        "value": "$2.9 trillion",
+        "as_of": "2024-12-31",
+        "refresh_cadence": "quarterly",
+        "source": "Firm financial reporting"
+      },
+      {
+        "claim": "Fixed income AUM",
+        "value": "$780 billion",
+        "as_of": "2024-12-31",
+        "refresh_cadence": "quarterly",
+        "source": "Firm financial reporting"
+      },
+      {
+        "claim": "Institutional share of AUM",
+        "value": "46%",
+        "as_of": "2024-12-31",
+        "refresh_cadence": "quarterly",
+        "source": "Firm financial reporting"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2025-02-10",
+    "review_by": "2026-02-10",
+    "supersedes": "gs-fw-002@v5",
+    "usage_stats": {
+      "retrievals_90d": 38,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 13,
+      "win_rate": 0.47
+    },
+    "version_history": [
+      {
+        "version": 6,
+        "date": "2025-02-10",
+        "author": "Priya Sharma",
+        "note": "Updated to 12/31/2024 figures."
+      },
+      {
+        "version": 5,
+        "date": "2024-02-06",
+        "author": "Priya Sharma",
+        "note": "Updated to 12/31/2023 figures."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-003",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Describe any significant organizational changes, ownership changes, or senior personnel turnover over the past three years.",
+    "question_variants": [
+      "Have there been any material organizational changes in recent years?"
+    ],
+    "answer_text": "There have been no changes to the firm's ownership structure in the past three years. Senior leadership of the asset management business has been stable: the chief executive of asset management and the global heads of fixed income, equities, and solutions have each served in their roles for more than five years. Ordinary-course organizational changes — team additions and individual retirements — are disclosed to clients quarterly, and none has materially affected the management of institutional portfolios during the period.",
+    "answer_summary": "Recent organizational, ownership, and senior personnel changes.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-20",
+    "review_by": "2027-04-20",
+    "supersedes": "gs-fw-003@v2",
+    "usage_stats": {
+      "retrievals_90d": 29,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 10,
+      "win_rate": 0.52
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-04-20",
+        "author": "Priya Sharma",
+        "note": "Annual review; refreshed tenure statements."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-004",
+    "version": 8,
+    "status": "approved",
+    "question_canonical": "Disclose any material litigation, regulatory investigations, or enforcement actions involving the firm in the past five years.",
+    "question_variants": [
+      "Disclose material legal or regulatory matters affecting the firm."
+    ],
+    "answer_text": "As a large, diversified financial institution, the firm's parent company is involved in legal and regulatory matters arising in the ordinary course of business; material matters are disclosed in the parent company's public filings (Form 10-K and 10-Q). No litigation or regulatory matter in the past five years has involved the investment management services proposed in this response or affected the firm's ability to manage institutional portfolios. The firm will promptly notify clients of any matter that would be material to their mandate.",
+    "answer_summary": "Litigation and regulatory disclosure position.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Legal & Compliance",
+    "effective_date": "2026-06-02",
+    "review_by": "2026-12-02",
+    "supersedes": "gs-fw-004@v7",
+    "usage_stats": {
+      "retrievals_90d": 44,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 15,
+      "win_rate": 0.48
+    },
+    "version_history": [
+      {
+        "version": 8,
+        "date": "2026-06-02",
+        "author": "Priya Sharma",
+        "note": "Semi-annual legal review sign-off."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-005",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "Describe the firm's insurance coverage, including errors and omissions and fiduciary liability coverage.",
+    "question_variants": [
+      "What insurance coverage does your firm carry?"
+    ],
+    "answer_text": "The firm maintains a comprehensive insurance program appropriate to the scale of its business, including professional liability (errors and omissions), fiduciary liability, financial institution bond, and cyber liability coverage, placed with a panel of highly rated carriers. Aggregate limits are reviewed annually against the firm's risk profile. Certificates of insurance evidencing coverage can be provided to clients upon request and at contracting.",
+    "answer_summary": "Professional liability, fiduciary, bond, and cyber insurance coverage.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Legal & Compliance",
+    "effective_date": "2026-03-15",
+    "review_by": "2027-03-15",
+    "supersedes": "gs-fw-005@v1",
+    "usage_stats": {
+      "retrievals_90d": 22,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 7,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2026-03-15",
+        "author": "Priya Sharma",
+        "note": "Added cyber liability reference."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-006",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Describe your compensation structure and how the firm retains key investment professionals.",
+    "question_variants": [
+      "How are investment professionals compensated and retained?"
+    ],
+    "answer_text": "Investment professionals are compensated with a competitive base salary and a discretionary annual incentive tied to multi-year investment performance, contribution to team research, and client outcomes. A meaningful portion of senior investors' incentive is deferred into firm stock and their own strategies, aligning them with clients over multi-year horizons. Retention is supported by long-tenured team culture, clear progression paths, and equity-linked deferrals; annualized turnover among senior investors has averaged below 5% over the past five years.",
+    "answer_summary": "Compensation structure and retention of investment professionals.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Senior investor annualized turnover (5yr avg)",
+        "value": "<5%",
+        "as_of": "2025-12-31",
+        "refresh_cadence": "quarterly",
+        "source": "HR reporting"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-01-22",
+    "review_by": "2027-01-22",
+    "supersedes": "gs-fw-006@v2",
+    "usage_stats": {
+      "retrievals_90d": 31,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 10,
+      "win_rate": 0.55
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-01-22",
+        "author": "Priya Sharma",
+        "note": "Refreshed turnover statistic."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-007",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe your compliance program, code of ethics, and personal trading policies.",
+    "question_variants": [
+      "Describe your code of ethics and personal trading controls."
+    ],
+    "answer_text": "The firm operates a global compliance program overseen by a dedicated Chief Compliance Officer independent of the investment teams. The program covers portfolio compliance (pre- and post-trade guideline monitoring on an automated platform), a code of ethics requiring annual attestation, personal account dealing pre-clearance with minimum holding periods, gifts and entertainment controls, and mandatory annual training. Compliance testing results are reported quarterly to senior management and the relevant board committees. Clients receive prompt notification of any material guideline breach affecting their portfolio.",
+    "answer_summary": "Compliance program, code of ethics, and personal trading policies.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Legal & Compliance",
+    "effective_date": "2026-05-30",
+    "review_by": "2027-05-30",
+    "supersedes": "gs-fw-007@v4",
+    "usage_stats": {
+      "retrievals_90d": 36,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 12,
+      "win_rate": 0.51
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-05-30",
+        "author": "Priya Sharma",
+        "note": "Annual compliance review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-008",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Describe your trading capabilities and approach to best execution.",
+    "question_variants": [
+      "How do you achieve and monitor best execution?"
+    ],
+    "answer_text": "Trading is executed by dedicated asset-class trading desks operating globally across time zones, connected to portfolio management through integrated order management systems. The firm's best execution framework considers price, cost, speed, likelihood of execution and settlement, and venue quality; execution quality is monitored through transaction cost analysis reviewed quarterly by a best execution committee. Counterparty lists are approved and reviewed by an independent credit risk function. Clients may request the firm's best execution policy and periodic TCA summaries.",
+    "answer_summary": "Trading platform and best execution framework.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-14",
+    "review_by": "2027-02-14",
+    "supersedes": "gs-fw-008@v3",
+    "usage_stats": {
+      "retrievals_90d": 27,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 9,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-02-14",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-009",
+    "version": 6,
+    "status": "approved",
+    "question_canonical": "Describe your business continuity, disaster recovery, and cybersecurity programs.",
+    "question_variants": [
+      "Describe your BCP, disaster recovery, and information security programs."
+    ],
+    "answer_text": "The firm maintains enterprise-wide business continuity and disaster recovery programs with geographically separated recovery sites, annual full-scale testing, and documented recovery time objectives for all critical investment functions. Cybersecurity is managed by the parent company's global security organization, which operates 24/7 monitoring, layered network defenses, employee phishing testing, and an incident response function; the program is assessed against the NIST Cybersecurity Framework and independently audited. Continuity and security summaries, including test results, are available to clients under NDA.",
+    "answer_summary": "Business continuity, disaster recovery, and cybersecurity programs.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-06-20",
+    "review_by": "2027-06-20",
+    "supersedes": "gs-fw-009@v5",
+    "usage_stats": {
+      "retrievals_90d": 33,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 11,
+      "win_rate": 0.53
+    },
+    "version_history": [
+      {
+        "version": 6,
+        "date": "2026-06-20",
+        "author": "Priya Sharma",
+        "note": "Annual review; refreshed framework reference."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-010",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe your client reporting capabilities, including standard reporting frequency and customization.",
+    "question_variants": [
+      "What client reporting do you provide, and can it be customized?"
+    ],
+    "answer_text": "Standard institutional reporting includes a monthly statement of holdings, transactions, and performance, and a quarterly investment review covering portfolio positioning, attribution, risk characteristics, and market outlook. Reports are delivered through a secure client portal with entitlement-based access for client staff, consultants, and custodians. Reporting can be customized in content, frequency, and format — including client-defined templates and data feeds to consultant databases — at no additional cost for standard customizations. A named client service team supports each institutional relationship.",
+    "answer_summary": "Standard and customized institutional client reporting.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-05",
+    "review_by": "2027-04-05",
+    "supersedes": "gs-fw-010@v4",
+    "usage_stats": {
+      "retrievals_90d": 35,
+      "downstream_edit_rate": 0.41,
+      "win_linked_uses": 12,
+      "win_rate": 0.54
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-04-05",
+        "author": "Priya Sharma",
+        "note": "Annual review; portal features refreshed."
+      }
+    ],
+    "tone_variants": {
+      "adv-chen": "Institutional clients receive a monthly statement of holdings, transactions, and performance, plus a quarterly investment review covering positioning, attribution, risk characteristics, and outlook. Delivery is through a secure, entitlement-based client portal accessible to client staff, consultants, and custodians. Standard customizations — client-defined templates, altered frequency, and consultant database feeds — carry no additional cost. Each relationship is supported by a named client service team."
+    }
+  },
+  {
+    "id": "gs-fw-011",
+    "version": 7,
+    "status": "approved",
+    "question_canonical": "Describe your firm's approach to environmental, social, and governance (ESG) considerations.",
+    "question_variants": [
+      "What is your firm-level ESG and sustainable investing policy?"
+    ],
+    "answer_text": "The firm takes a research-driven approach to ESG. Where consistent with a client's mandate and applicable law, investment teams assess financially material environmental, social, and governance factors alongside traditional analysis, supported by a best-in-class central sustainable investing research function and proprietary data tools. The firm does not apply blanket exclusions to client portfolios; ESG integration is calibrated to each mandate's objectives and guidelines. Dedicated ESG reporting is available for mandates that elect it.",
+    "answer_summary": "Firmwide approach to ESG and sustainable investing.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [
+      "esg_claims"
+    ],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-28",
+    "review_by": "2027-03-28",
+    "supersedes": "gs-fw-011@v6",
+    "usage_stats": {
+      "retrievals_90d": 40,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 13,
+      "win_rate": 0.45
+    },
+    "version_history": [
+      {
+        "version": 7,
+        "date": "2026-03-28",
+        "author": "Priya Sharma",
+        "note": "Aligned language with updated regulatory guidance."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fw-012",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "Describe your firm's approach to fees and your willingness to negotiate fee structures.",
+    "question_variants": [
+      "Are you willing to negotiate fees or offer performance-based structures?"
+    ],
+    "answer_text": "The firm's fee philosophy is to price mandates transparently and competitively for the value delivered, with schedules that scale with mandate size. Standard institutional fee schedules are tiered on assets under management; the firm is open to discussing alternative structures — including flat fees and performance-based arrangements consistent with applicable regulation — for strategic mandates. All fees are fully disclosed; the firm does not charge undisclosed transaction, custody, or administrative markups.",
+    "answer_summary": "Fee philosophy and openness to alternative fee structures.",
+    "asset_class": "firmwide",
+    "products": [
+      "firmwide"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-01-10",
+    "review_by": "2027-01-10",
+    "supersedes": "gs-fw-012@v1",
+    "usage_stats": {
+      "retrievals_90d": 25,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 8,
+      "win_rate": 0.52
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2026-01-10",
+        "author": "Priya Sharma",
+        "note": "Clarified performance-fee availability."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-001",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe the investment team responsible for your core fixed income strategy.",
+    "question_variants": [
+      "Who manages your core bond strategy and how is the team organized?"
+    ],
+    "answer_text": "The core fixed income strategy is managed by a team of 42 investment professionals organized across portfolio management, sector specialist, and quantitative research functions. The three lead portfolio managers average 24 years of industry experience and 16 years with the firm. Sector teams covering governments, securitized, investment-grade credit, and municipals feed relative-value views into a weekly investment policy forum, where strategy-level positioning is set. The team is supported by the firm's global research platform of more than 70 career credit analysts.",
+    "answer_summary": "Core fixed income team structure, size, and experience.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Core FI investment professionals",
+        "value": "42",
+        "as_of": "2026-03-31",
+        "refresh_cadence": "annual",
+        "source": "Team roster verification"
+      },
+      {
+        "claim": "Lead PM average industry experience",
+        "value": "24 years",
+        "as_of": "2026-03-31",
+        "refresh_cadence": "annual",
+        "source": "Team roster verification"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-05-18",
+    "review_by": "2027-05-18",
+    "supersedes": "gs-fi-001@v4",
+    "usage_stats": {
+      "retrievals_90d": 19,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 6,
+      "win_rate": 0.58
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-05-18",
+        "author": "Priya Sharma",
+        "note": "Updated team counts after annual verification."
+      }
+    ],
+    "tone_variants": {
+      "adv-chen": "Core fixed income is managed by 42 investment professionals across portfolio management, sector specialist, and quantitative research roles. The three lead portfolio managers average 24 years of industry experience and 16 years at the firm. Sector teams — governments, securitized, investment-grade credit, municipals — contribute relative-value views to a weekly investment policy forum that sets strategy positioning. More than 70 career credit analysts on the global research platform support the team."
+    }
+  },
+  {
+    "id": "gs-fi-002",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Provide biographies of the key investment professionals for this strategy.",
+    "question_variants": [
+      "Provide bios for the portfolio managers on this strategy."
+    ],
+    "answer_text": "Lead portfolio manager Sarah Okafor, Managing Director, has managed the strategy since 2014 and joined the firm in 2005 from a major primary dealer. Co-portfolio manager James Liu, Managing Director, joined in 2009 and previously led the securitized sector team. Co-portfolio manager Elena Vasquez, Executive Director, joined in 2012 as a credit analyst and was promoted to the portfolio management group in 2018. The strategy draws on 38 investment professionals across the core fixed income platform; full biographies for all named professionals are provided in the appendix.",
+    "answer_summary": "Key personnel biographies for the core bond strategy.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Core FI platform professionals",
+        "value": "38",
+        "as_of": "2025-09-30",
+        "refresh_cadence": "annual",
+        "source": "Team roster (prior verification)"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2025-11-12",
+    "review_by": "2026-11-12",
+    "supersedes": "gs-fi-002@v3",
+    "usage_stats": {
+      "retrievals_90d": 17,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 6,
+      "win_rate": 0.56
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2025-11-12",
+        "author": "Priya Sharma",
+        "note": "Updated after Vasquez promotion."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-003",
+    "version": 6,
+    "status": "approved",
+    "question_canonical": "Describe your investment philosophy for core fixed income.",
+    "question_variants": [
+      "What is your fixed income investment philosophy?",
+      "What do you believe drives excess returns in core bond portfolios?"
+    ],
+    "answer_text": "We believe bond markets are episodically inefficient: yield-curve positioning, sector rotation, and security selection each offer repeatable sources of excess return when pursued with discipline and risk control. Our philosophy rests on three tenets — value-driven decision making anchored in rigorous fundamental research, diversification of alpha sources so no single macro view dominates results, and structural risk discipline that sizes positions to survive being early. We seek consistent, incremental excess returns compounded over full market cycles rather than concentrated bets on rate direction.",
+    "answer_summary": "Core fixed income philosophy: diversified alpha, risk discipline.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-25",
+    "review_by": "2027-02-25",
+    "supersedes": "gs-fi-003@v5",
+    "usage_stats": {
+      "retrievals_90d": 23,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 8,
+      "win_rate": 0.61
+    },
+    "version_history": [
+      {
+        "version": 6,
+        "date": "2026-02-25",
+        "author": "Priya Sharma",
+        "note": "Annual review; tightened tenet language."
+      },
+      {
+        "version": 5,
+        "date": "2025-02-20",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {
+      "adv-chen": "Bond markets are episodically inefficient. Yield-curve positioning, sector rotation, and security selection are each repeatable sources of excess return when pursued with discipline. Three tenets govern the strategy: value-driven decisions anchored in fundamental research; diversified alpha sources, so no single macro view dominates results; and structural risk discipline that sizes positions to survive being early. The objective is consistent, incremental excess return compounded over full cycles — not concentrated bets on rate direction."
+    }
+  },
+  {
+    "id": "gs-fi-004",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe your investment process, including idea generation and decision-making.",
+    "question_variants": [
+      "Walk through your investment process from idea to portfolio."
+    ],
+    "answer_text": "The process begins with a quarterly macro framework set by the investment policy committee, establishing ranges for duration, curve, and sector risk. Within that framework, sector specialist teams generate relative-value ideas continuously from bottom-up research, quantitative screens, and primary market activity. Ideas are debated at the weekly investment policy forum and sized by the portfolio managers against explicit risk budgets. Portfolio managers retain final authority and accountability for every position. The process is designed so research conviction, not trading momentum, drives portfolio changes.",
+    "answer_summary": "Core fixed income process: macro framework to position sizing.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-25",
+    "review_by": "2027-02-25",
+    "supersedes": "gs-fi-004@v4",
+    "usage_stats": {
+      "retrievals_90d": 21,
+      "downstream_edit_rate": 0.27,
+      "win_linked_uses": 7,
+      "win_rate": 0.57
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-02-25",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-005",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "How do you manage duration and yield curve positioning?",
+    "question_variants": [
+      "What is your approach to interest rate risk and curve positioning?"
+    ],
+    "answer_text": "Duration is managed within a disciplined band of +/-1 year versus the benchmark, with positioning set by the investment policy committee's quarterly framework and adjusted tactically as valuations and macro data evolve. Curve positioning is expressed through key-rate duration targets rather than a single aggregate number, allowing the team to isolate steepener, flattener, and butterfly views. Both exposures are monitored daily against risk budgets, and scenario analysis quantifies portfolio behavior across parallel and non-parallel rate shocks before positions are implemented.",
+    "answer_summary": "Duration banding and key-rate curve positioning discipline.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Duration band vs. benchmark",
+        "value": "+/-1 year",
+        "as_of": "2026-03-08",
+        "refresh_cadence": "annual",
+        "source": "Strategy guidelines"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-08",
+    "review_by": "2027-03-08",
+    "supersedes": "gs-fi-005@v2",
+    "usage_stats": {
+      "retrievals_90d": 16,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.55
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-03-08",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-006",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Describe your credit research capabilities and process.",
+    "question_variants": [
+      "Describe the depth of your credit research team."
+    ],
+    "answer_text": "Credit research is conducted by a global team of more than 70 career analysts organized by industry, each maintaining independent internal ratings and relative-value rankings on their coverage. Analysts build issuer-level financial models, meet management teams regularly, and publish forward-looking theses with explicit downgrade triggers. Internal ratings are independent of the rating agencies and frequently anticipate agency actions. Research conviction is expressed through a formal recommendation scale that portfolio managers use directly in position sizing, and analyst compensation is linked to the measured performance of their recommendations.",
+    "answer_summary": "Global career-analyst credit research platform and internal ratings.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond",
+      "credit"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Career credit analysts",
+        "value": "70+",
+        "as_of": "2026-03-31",
+        "refresh_cadence": "annual",
+        "source": "Team roster verification"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-12",
+    "review_by": "2027-04-12",
+    "supersedes": "gs-fi-006@v3",
+    "usage_stats": {
+      "retrievals_90d": 18,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 6,
+      "win_rate": 0.59
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-04-12",
+        "author": "Priya Sharma",
+        "note": "Annual review; analyst count verified."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-007",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "How are sector allocation decisions made and implemented?",
+    "question_variants": [
+      "How do you decide sector over- and underweights?"
+    ],
+    "answer_text": "Sector allocation is set at the weekly investment policy forum, where sector teams present valuations, fundamentals, and technicals for their markets on a standardized scorecard. The portfolio managers translate the forum's rankings into sector over- and underweights within the risk budget approved by the investment policy committee. Implementation favors liquid instruments first — index-eligible cash bonds, followed by derivatives where permitted — so allocation shifts can be executed within days without forcing security-level turnover. Sector positioning and its contribution to tracking error are reviewed daily by the independent risk team.",
+    "answer_summary": "Sector allocation scorecard and implementation approach.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-08",
+    "review_by": "2027-03-08",
+    "supersedes": "gs-fi-007@v2",
+    "usage_stats": {
+      "retrievals_90d": 14,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.54
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-03-08",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-008",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe your risk management framework for fixed income portfolios.",
+    "question_variants": [
+      "What risk controls apply to fixed income portfolios?"
+    ],
+    "answer_text": "Risk management operates on three lines of defense. Portfolio managers own risk in the first instance, working within explicit budgets for duration, curve, sector, and issuer exposure. An independent investment risk team — reporting outside the investment organization — monitors every portfolio daily against those budgets and client guidelines, using tracking error decomposition, scenario analysis, and stress tests spanning historical and hypothetical shocks. Compliance provides the third line through automated pre- and post-trade guideline checks. Breaches at any level trigger documented escalation with defined remediation timelines.",
+    "answer_summary": "Three-lines-of-defense fixed income risk framework.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-05-02",
+    "review_by": "2027-05-02",
+    "supersedes": "gs-fi-008@v4",
+    "usage_stats": {
+      "retrievals_90d": 20,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 7,
+      "win_rate": 0.6
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-05-02",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {
+      "adv-chen": "Risk management runs on three lines of defense. First, portfolio managers own risk directly, operating within explicit budgets for duration, curve, sector, and issuer exposure. Second, an independent investment risk team — reporting outside the investment organization — monitors every portfolio daily using tracking error decomposition, scenario analysis, and historical and hypothetical stress tests. Third, compliance runs automated pre- and post-trade guideline checks. Any breach triggers documented escalation with defined remediation timelines."
+    }
+  },
+  {
+    "id": "gs-fi-009",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "How do you manage tracking error, and what is the expected range for this strategy?",
+    "question_variants": [
+      "What tracking error do you target for this strategy?"
+    ],
+    "answer_text": "The strategy targets realized tracking error of 50 to 150 basis points annualized under normal market conditions, consistent with its objective of steady incremental excess return. Ex-ante tracking error is decomposed daily across duration, curve, sector, and idiosyncratic sources so the team can verify that risk is deployed where conviction is highest. When ex-ante tracking error approaches the top of the range, the investment policy forum reviews and, where appropriate, trims the largest contributors. The independent risk team can mandate de-risking if budgets are exceeded.",
+    "answer_summary": "Tracking error target range and daily risk decomposition.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Target tracking error range",
+        "value": "50–150 bps",
+        "as_of": "2026-05-02",
+        "refresh_cadence": "annual",
+        "source": "Strategy guidelines"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-05-02",
+    "review_by": "2027-05-02",
+    "supersedes": "gs-fi-009@v2",
+    "usage_stats": {
+      "retrievals_90d": 15,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.58
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-05-02",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-010",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "Describe how you monitor and manage liquidity risk in the portfolio.",
+    "question_variants": [
+      "How do you measure and control portfolio liquidity?"
+    ],
+    "answer_text": "Every security is assigned a liquidity score at purchase, refreshed daily from dealer quotes, trade volumes, and issue characteristics. The portfolio is managed to defined minimums for highly liquid assets, and concentration limits cap exposure to less liquid structures. The risk team runs monthly liquidation stress tests estimating time-to-cash under normal and stressed conditions for the full portfolio, with results reviewed by the investment policy committee. For client-specific needs — such as benefit payment schedules — liquidity ladders can be tailored to the mandate.",
+    "answer_summary": "Liquidity scoring, minimums, and liquidation stress testing.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-25",
+    "review_by": "2027-04-25",
+    "supersedes": "gs-fi-010@v1",
+    "usage_stats": {
+      "retrievals_90d": 12,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 4,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2026-04-25",
+        "author": "Priya Sharma",
+        "note": "Added liquidation stress test detail."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-011",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Describe your use of derivatives and how counterparty risk is managed.",
+    "question_variants": [
+      "Do you use derivatives, and how is counterparty exposure controlled?"
+    ],
+    "answer_text": "Where permitted by client guidelines, the strategy uses exchange-traded interest rate futures and centrally cleared swaps primarily for duration and curve management, and index credit default swaps for efficient sector positioning. Derivatives are not used to lever the portfolio; aggregate economic exposure is maintained within the same risk budgets as cash instruments. Counterparty exposure on any bilateral positions is collateralized daily under ISDA/CSA agreements with an approved counterparty list maintained by the independent credit risk function, and concentration to any single counterparty is capped.",
+    "answer_summary": "Derivatives usage policy and counterparty risk management.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-01-30",
+    "review_by": "2027-01-30",
+    "supersedes": "gs-fi-011@v3",
+    "usage_stats": {
+      "retrievals_90d": 13,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 4,
+      "win_rate": 0.52
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-01-30",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-012",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Describe your performance attribution process and how results are communicated to clients.",
+    "question_variants": [
+      "How do you attribute and report performance?"
+    ],
+    "answer_text": "Attribution is produced daily on a dedicated fixed income platform that decomposes excess return into duration, curve, sector allocation, security selection, and trading effects, fully reconciled to official performance. Portfolio managers review attribution weekly to confirm results are coming from intended positions. Clients receive attribution in the quarterly investment review at the level of detail they specify, and the team walks through drivers of performance — favorable and unfavorable — at portfolio review meetings. Past performance is not a guarantee of future results.",
+    "answer_summary": "Daily fixed income attribution and client communication.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [
+      "performance_claims",
+      "requires_disclosure:past_performance"
+    ],
+    "required_disclosures": [
+      "Past performance is not a guarantee of future results."
+    ],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-20",
+    "review_by": "2027-03-20",
+    "supersedes": "gs-fi-012@v2",
+    "usage_stats": {
+      "retrievals_90d": 17,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 6,
+      "win_rate": 0.56
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-03-20",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-013",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "How is ESG integrated into your fixed income investment process?",
+    "question_variants": [
+      "How do ESG factors enter your bond selection process?"
+    ],
+    "answer_text": "ESG integration in fixed income is analyst-led. Credit analysts assess financially material environmental, social, and governance factors — transition exposure, litigation risk, governance quality — within their internal ratings, supported by the firm's central sustainable investing research and proprietary scoring tools. For sovereign and securitized sectors, dedicated frameworks address the distinct data challenges of those markets. ESG factors inform relative value and position sizing; they do not impose automatic exclusions unless a client's guidelines direct otherwise. Mandate-level ESG reporting, including carbon metrics, is available on request.",
+    "answer_summary": "Analyst-led ESG integration in fixed income.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [
+      "esg_claims"
+    ],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-28",
+    "review_by": "2027-03-28",
+    "supersedes": "gs-fi-013@v3",
+    "usage_stats": {
+      "retrievals_90d": 15,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.47
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-03-28",
+        "author": "Priya Sharma",
+        "note": "Aligned with firmwide ESG language update."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-fi-014",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "What is the capacity of the strategy and how do you manage it?",
+    "question_variants": [
+      "Is the strategy near capacity? How would you manage growth?"
+    ],
+    "answer_text": "Strategy capacity is formally assessed annually by the investment policy committee using market depth, position concentration, and transaction cost modeling. The current assessment supports meaningful additional growth without degrading the opportunity set, and the firm has a demonstrated record of closing strategies to preserve results for existing clients. Capacity conclusions and any changes in status are communicated to clients and consultants proactively.",
+    "answer_summary": "Annual strategy capacity assessment and closure discipline.",
+    "asset_class": "fixed_income",
+    "products": [
+      "core_bond"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-05",
+    "review_by": "2027-02-05",
+    "supersedes": "gs-fi-014@v1",
+    "usage_stats": {
+      "retrievals_90d": 9,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 3,
+      "win_rate": 0.55
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2026-02-05",
+        "author": "Priya Sharma",
+        "note": "Annual capacity language refresh."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-eq-001",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "Describe the investment team responsible for your global equity strategy.",
+    "question_variants": [
+      "Describe the team behind your global equity portfolio."
+    ],
+    "answer_text": "The global equity strategy is managed by a team of 28 investment professionals: five portfolio managers and 23 career research analysts organized by global sector. The portfolio managers average 21 years of industry experience, and the analyst team's sector coverage is deliberately global — analysts cover their industries across regions to identify the best businesses worldwide rather than the best in each market. The team is based across London, New York, and Hong Kong, with research conclusions shared on a single global platform.",
+    "answer_summary": "Global equity team structure across three regional hubs.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Global equity investment professionals",
+        "value": "28",
+        "as_of": "2026-03-31",
+        "refresh_cadence": "annual",
+        "source": "Team roster verification"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-30",
+    "review_by": "2027-04-30",
+    "supersedes": "gs-eq-001@v3",
+    "usage_stats": {
+      "retrievals_90d": 16,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-04-30",
+        "author": "Priya Sharma",
+        "note": "Annual review; team counts verified."
+      }
+    ],
+    "tone_variants": {
+      "adv-whitmore": "We think of the global equity team as the engine of a long-term partnership with our clients. Twenty-eight investment professionals — five portfolio managers averaging 21 years of experience, supported by 23 career analysts — work as one team across London, New York, and Hong Kong. Our analysts cover their industries globally, not market by market, because our clients hire us to find the best businesses in the world wherever they are listed. Every research conclusion is shared on a single global platform."
+    }
+  },
+  {
+    "id": "gs-eq-002",
+    "version": 5,
+    "status": "approved",
+    "question_canonical": "Describe your investment philosophy for global equities.",
+    "question_variants": [
+      "What is your global equity investment philosophy?"
+    ],
+    "answer_text": "We believe superior long-term returns come from owning a focused portfolio of exceptional businesses — companies with durable competitive advantages, strong balance sheets, and managements that allocate capital well — purchased at sensible valuations and held patiently. Markets systematically underprice the durability of quality compounding over multi-year horizons. The strategy therefore emphasizes deep fundamental research over market timing, a long holding period that lets compounding work, and valuation discipline that protects clients when enthusiasm outruns fundamentals.",
+    "answer_summary": "Quality-compounding philosophy with valuation discipline.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-04-30",
+    "review_by": "2027-04-30",
+    "supersedes": "gs-eq-002@v4",
+    "usage_stats": {
+      "retrievals_90d": 18,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 6,
+      "win_rate": 0.48
+    },
+    "version_history": [
+      {
+        "version": 5,
+        "date": "2026-04-30",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {
+      "adv-whitmore": "Our philosophy starts with what our clients are actually trying to achieve: compounding capital reliably over decades, not quarters. We believe that is best done by owning a focused portfolio of exceptional businesses — durable competitive advantages, strong balance sheets, managements that allocate capital well — bought at sensible prices and held patiently. Markets consistently underprice how long quality companies can compound. So we do deep fundamental research rather than market timing, we hold for years, and we stay disciplined on valuation when enthusiasm outruns fundamentals."
+    }
+  },
+  {
+    "id": "gs-eq-003",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "Describe the stability of the investment team and any turnover among senior members.",
+    "question_variants": [
+      "Describe portfolio manager and analyst turnover on this team."
+    ],
+    "answer_text": "Team turnover has been modest and managed. Two portfolio managers have departed in the past five years and were succeeded by internal candidates who had co-managed the strategy for several years prior, ensuring continuity of process. Analyst turnover has averaged 8% annually, in line with industry norms. Succession planning is reviewed annually by the head of equities.",
+    "answer_summary": "Global equity team stability, turnover, and succession.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Analyst annualized turnover",
+        "value": "8%",
+        "as_of": "2025-09-30",
+        "refresh_cadence": "quarterly",
+        "source": "HR reporting"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2025-10-08",
+    "review_by": "2026-10-08",
+    "supersedes": "gs-eq-003@v1",
+    "usage_stats": {
+      "retrievals_90d": 12,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 4,
+      "win_rate": 0.17
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2025-10-08",
+        "author": "Priya Sharma",
+        "note": "Updated turnover statistics."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-eq-004",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Describe your equity research process and how ideas enter the portfolio.",
+    "question_variants": [
+      "How do new stock ideas enter the portfolio?"
+    ],
+    "answer_text": "Each analyst maintains a ranked coverage list built from a standardized research template: competitive positioning, unit economics, balance sheet quality, capital allocation record, and a five-year expected return derived from proprietary financial models. New ideas are proposed at the weekly global research meeting, where the thesis is challenged by the full team before entering the eligible list. Portfolio managers construct the portfolio exclusively from that list, sizing positions by conviction and expected return, with every holding re-underwritten at least annually.",
+    "answer_summary": "Ranked coverage lists and challenge-based idea admission.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-05-22",
+    "review_by": "2027-05-22",
+    "supersedes": "gs-eq-004@v2",
+    "usage_stats": {
+      "retrievals_90d": 14,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 5,
+      "win_rate": 0.46
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-05-22",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-eq-005",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Provide your standard fee schedule for a global equity separate account mandate.",
+    "question_variants": [
+      "What are your fees for a global equity separate account?"
+    ],
+    "answer_text": "The standard fee schedule for a global equity separate account is tiered: 55 basis points on the first $100 million, 45 basis points on the next $150 million, and 38 basis points on assets above $250 million, billed quarterly in arrears on average market value. The schedule includes portfolio management, standard reporting, and client service; custody is contracted separately by the client. The firm is open to discussing mandate-specific structures, including performance-based fees, for strategic relationships.",
+    "answer_summary": "Tiered global equity separate account fee schedule.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "First tier fee (to $100M)",
+        "value": "55 bps",
+        "as_of": "2026-01-15",
+        "refresh_cadence": "annual",
+        "source": "Institutional fee schedule"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-01-15",
+    "review_by": "2027-01-15",
+    "supersedes": "gs-eq-005@v2",
+    "usage_stats": {
+      "retrievals_90d": 11,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 4,
+      "win_rate": 0.55
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-01-15",
+        "author": "Priya Sharma",
+        "note": "Annual fee schedule confirmation."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-eq-006",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "How is ESG integrated into your global equity investment process?",
+    "question_variants": [
+      "How is ESG reflected in your equity research and voting?"
+    ],
+    "answer_text": "ESG analysis is embedded in the research template every analyst completes: governance quality, environmental transition exposure, and social license factors are assessed as part of the durability of each company's competitive position, informed by the firm's central sustainable investing research and direct company engagement. The team conducts several hundred company engagements annually, and voting is executed in clients' interests under the firm's published proxy voting policy. ESG considerations shape conviction and position size; exclusions apply only where a client's guidelines direct them.",
+    "answer_summary": "ESG embedded in equity research, engagement, and proxy voting.",
+    "asset_class": "global_equity",
+    "products": [
+      "global_select_equity"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [
+      "esg_claims"
+    ],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-03-28",
+    "review_by": "2027-03-28",
+    "supersedes": "gs-eq-006@v3",
+    "usage_stats": {
+      "retrievals_90d": 13,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 4,
+      "win_rate": 0.44
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-03-28",
+        "author": "Priya Sharma",
+        "note": "Aligned with firmwide ESG language update."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-ma-001",
+    "version": 3,
+    "status": "approved",
+    "question_canonical": "Describe your multi-asset investment capabilities and team.",
+    "question_variants": [
+      "Describe your multi-asset team and capabilities."
+    ],
+    "answer_text": "The multi-asset solutions team manages outcome-oriented portfolios — income, balanced growth, and liability-aware strategies — drawing on the full breadth of the firm's underlying equity, fixed income, and alternatives capabilities. The team of 35 investment professionals combines strategic asset allocation research, tactical positioning, and manager selection, and publishes the firm's long-term capital market assumptions used by institutions globally. Portfolios are built to each client's objective and constraints rather than to a single house model.",
+    "answer_summary": "Multi-asset solutions team and outcome-oriented capabilities.",
+    "asset_class": "multi_asset",
+    "products": [
+      "multi_asset_income",
+      "balanced"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Multi-asset investment professionals",
+        "value": "35",
+        "as_of": "2025-12-31",
+        "refresh_cadence": "annual",
+        "source": "Team roster verification"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-18",
+    "review_by": "2027-02-18",
+    "supersedes": "gs-ma-001@v2",
+    "usage_stats": {
+      "retrievals_90d": 10,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 3,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 3,
+        "date": "2026-02-18",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-ma-002",
+    "version": 2,
+    "status": "approved",
+    "question_canonical": "Describe your tactical asset allocation process.",
+    "question_variants": [
+      "How do you make tactical allocation decisions?"
+    ],
+    "answer_text": "Tactical positioning is governed by a monthly asset allocation committee that scores major asset classes on valuation, macro momentum, and market technicals using a consistent quantitative framework, overlaid with fundamental judgment. Tactical tilts are bounded by explicit ranges around each client's strategic allocation and are implemented primarily with liquid index instruments to control cost. The committee documents the thesis and exit conditions for every tilt, and positioning is reviewed against those conditions at each meeting.",
+    "answer_summary": "Committee-governed tactical asset allocation process.",
+    "asset_class": "multi_asset",
+    "products": [
+      "multi_asset_income",
+      "balanced"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-02-18",
+    "review_by": "2027-02-18",
+    "supersedes": "gs-ma-002@v1",
+    "usage_stats": {
+      "retrievals_90d": 8,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 3,
+      "win_rate": 0.5
+    },
+    "version_history": [
+      {
+        "version": 2,
+        "date": "2026-02-18",
+        "author": "Priya Sharma",
+        "note": "Annual review."
+      }
+    ],
+    "tone_variants": {}
+  },
+  {
+    "id": "gs-ma-003",
+    "version": 4,
+    "status": "approved",
+    "question_canonical": "How do you incorporate capital market assumptions into portfolio construction?",
+    "question_variants": [
+      "How do capital market assumptions drive your portfolio construction?"
+    ],
+    "answer_text": "The firm publishes long-term capital market assumptions annually — expected returns, volatilities, and correlations for more than 200 asset and strategy classes — produced by a dedicated research team and used by institutional investors worldwide. These assumptions anchor strategic asset allocation work for every multi-asset mandate: portfolio construction optimizes against the client's objective, constraints, and liability profile using the assumptions as forward-looking inputs, stress-tested against historical regimes. Assumptions and methodology are shared openly with clients and their consultants.",
+    "answer_summary": "Long-term capital market assumptions anchoring allocation work.",
+    "asset_class": "multi_asset",
+    "products": [
+      "multi_asset_income",
+      "balanced"
+    ],
+    "vehicle_types": [
+      "sma",
+      "cit"
+    ],
+    "client_types": [
+      "institutional"
+    ],
+    "regions": [
+      "us"
+    ],
+    "compliance_tags": [],
+    "required_disclosures": [],
+    "data_points": [
+      {
+        "claim": "Asset classes covered by LTCMA",
+        "value": "200+",
+        "as_of": "2026-01-28",
+        "refresh_cadence": "annual",
+        "source": "LTCMA publication"
+      }
+    ],
+    "owner": "Priya Sharma",
+    "approver": "Content Governance Committee",
+    "effective_date": "2026-01-28",
+    "review_by": "2027-01-28",
+    "supersedes": "gs-ma-003@v3",
+    "usage_stats": {
+      "retrievals_90d": 9,
+      "downstream_edit_rate": 0.08,
+      "win_linked_uses": 3,
+      "win_rate": 0.56
+    },
+    "version_history": [
+      {
+        "version": 4,
+        "date": "2026-01-28",
+        "author": "Priya Sharma",
+        "note": "Updated to current assumptions edition."
+      }
+    ],
+    "tone_variants": {}
+  }
+]

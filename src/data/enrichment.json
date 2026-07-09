@@ -1,0 +1,113 @@
+[
+  {
+    "id": "enr-001",
+    "kind": "promote_winning_variant",
+    "title": "Winning variant of the core bond process answer",
+    "rationale": "An adviser-edited variant of the investment process answer (gs-fi-004) appeared in 4 of the last 5 winning core fixed income finals, versus a 57% win rate for the unmodified golden answer. The variant adds one sentence on decision accountability and speed. Correlation is decision support, not causation — the variant also coincided with strong relative performance periods.",
+    "qaId": "gs-fi-004",
+    "proposedQuestion": "Describe your investment process, including idea generation and decision-making.",
+    "proposedAnswer": "The process begins with a quarterly macro framework set by the investment policy committee, establishing ranges for duration, curve, and sector risk. Within that framework, sector specialist teams generate relative-value ideas continuously from bottom-up research, quantitative screens, and primary market activity. Ideas are debated at the weekly investment policy forum and sized by the portfolio managers against explicit risk budgets. Portfolio managers retain final authority and accountability for every position, and because the forum meets weekly, high-conviction ideas move from research to portfolio in days, not quarters. The process is designed so research conviction, not trading momentum, drives portfolio changes.",
+    "proposedDataPoints": null,
+    "provenance": {
+      "sources": [
+        "Great Lakes Municipal Employees' Pension (2025 — won)",
+        "Harbor County Retirement Board (2025 — won)",
+        "Cascade County Employees' Retirement (2025 — won)",
+        "Pinewood State Teachers' Plan (2024 — won)",
+        "Delta Insurance General Account (2024 — lost)"
+      ],
+      "sampleSize": "n=5 win-linked responses containing the variant (4 wins, 1 loss)",
+      "signal": "Answer-level outcome correlation, core fixed income institutional segment"
+    },
+    "status": "new",
+    "dismissReason": null
+  },
+  {
+    "id": "enr-002",
+    "kind": "underperforming_answer",
+    "title": "Team-stability answer over-represented in losses",
+    "rationale": "The global equity team-stability answer (gs-eq-003) appeared in 6 submitted responses over the trailing 18 months; 5 were lost mandates (win rate 17% vs. 46% average for global equity answers). Consultant feedback on two losses cited 'thin treatment of succession.' The answer leads with departures rather than the succession outcome. Correlation is decision support, not causation.",
+    "qaId": "gs-eq-003",
+    "proposedQuestion": "Describe the stability of the investment team and any turnover among senior members.",
+    "proposedAnswer": "Continuity of process is protected by deliberate succession planning, reviewed annually by the head of equities. When two portfolio managers retired over the past five years, each was succeeded by an internal candidate who had co-managed the strategy for several years beforehand, so clients experienced no change in philosophy or process. Analyst turnover has averaged 8% annually, in line with industry norms, and the analyst bench is deep enough that coverage transitions are planned rather than reactive.",
+    "proposedDataPoints": [
+      { "claim": "Analyst annualized turnover", "value": "8%", "as_of": "2025-09-30", "refresh_cadence": "annual", "source": "HR reporting" }
+    ],
+    "provenance": {
+      "sources": [
+        "Westbrook Foundation (2025 — lost)",
+        "Silvergate Hospital System (2025 — lost)",
+        "Aldwych College Endowment (2024 — lost)",
+        "Meridian Health Retirement Trust (2024 — lost)",
+        "Brookline Charitable Trust (2024 — won)",
+        "Kestrel Family Office (2024 — lost)"
+      ],
+      "sampleSize": "n=6 responses containing this answer (1 win, 5 losses)",
+      "signal": "Loss-linked outcome correlation, global equity endowment & foundation segment"
+    },
+    "status": "new",
+    "dismissReason": null
+  },
+  {
+    "id": "enr-003",
+    "kind": "freshness_breach",
+    "title": "Firmwide AUM figures past freshness SLA",
+    "rationale": "The firmwide AUM answer (gs-fw-002) carries data points as of 2024-12-31 with a quarterly refresh cadence, and its review-by date (2026-02-10) has passed. The pair was retrieved 38 times in the last 90 days, so stale figures are actively reaching drafts — the compliance agent is currently flagging it on every RFP that uses it.",
+    "qaId": "gs-fw-002",
+    "proposedQuestion": "State your firm's total assets under management and the breakdown by asset class and client type.",
+    "proposedAnswer": "Firmwide assets under management were $3.0 trillion as of March 31, 2026, of which $810 billion was managed in fixed income strategies, $960 billion in equities, $670 billion in multi-asset solutions and $560 billion in liquidity and alternatives. Institutional clients — pension plans, insurers, sovereigns, endowments and foundations — represent approximately 47% of assets under management. Detailed breakdowns by strategy and vehicle are available in the appendix and are updated quarterly.",
+    "proposedDataPoints": [
+      { "claim": "Firmwide AUM", "value": "$3.0 trillion", "as_of": "2026-03-31", "refresh_cadence": "quarterly", "source": "Firm financial reporting" },
+      { "claim": "Fixed income AUM", "value": "$810 billion", "as_of": "2026-03-31", "refresh_cadence": "quarterly", "source": "Firm financial reporting" },
+      { "claim": "Institutional share of AUM", "value": "47%", "as_of": "2026-03-31", "refresh_cadence": "quarterly", "source": "Firm financial reporting" }
+    ],
+    "provenance": {
+      "sources": ["Q1 2026 firm financial reporting", "Golden-source freshness monitor"],
+      "sampleSize": "38 retrievals in the last 90 days carried the stale figures",
+      "signal": "review_by date passed 2026-02-10; data_points exceed quarterly refresh cadence"
+    },
+    "status": "new",
+    "dismissReason": null
+  },
+  {
+    "id": "enr-004",
+    "kind": "coverage_gap",
+    "title": "Recurring gap: portfolio manager departure history",
+    "rationale": "Four RFPs in the past 12 months asked for a specific accounting of portfolio manager departures with reasons and succession arrangements, and each routed to NEEDS CONTENT. This is now the most frequent unresolved question cluster in the fixed income coverage-gap queue. A candidate pair is drafted below from verified HR data for steward authorship.",
+    "qaId": null,
+    "proposedQuestion": "List all portfolio manager departures from the core fixed income team during the past five years, including reasons and succession arrangements.",
+    "proposedAnswer": "One portfolio manager has departed the core fixed income team in the past five years: a senior portfolio manager retired in 2023 after 28 years with the firm. The retirement was announced to clients twelve months in advance, and coverage transitioned to a co-portfolio manager who had shared responsibility for the portfolio since 2019, with no change to philosophy or process. No portfolio manager has left the team for a competitor during the period.",
+    "proposedDataPoints": [
+      { "claim": "Core FI PM departures (5 years)", "value": "1 (retirement, 2023)", "as_of": "2026-06-30", "refresh_cadence": "annual", "source": "HR reporting" }
+    ],
+    "provenance": {
+      "sources": [
+        "SCPERS Core Fixed Income Search (2026 — in progress)",
+        "Cascade County Employees' Retirement (2025)",
+        "Pinewood State Teachers' Plan (2024)",
+        "Delta Insurance General Account (2024)"
+      ],
+      "sampleSize": "n=4 RFPs raised this question in 12 months",
+      "signal": "NEEDS CONTENT cluster, fixed income institutional segment"
+    },
+    "status": "new",
+    "dismissReason": null
+  },
+  {
+    "id": "enr-005",
+    "kind": "convergent_edit",
+    "title": "Advisers consistently condense the client reporting answer",
+    "rationale": "Four different advisers made substantively similar edits to the client reporting answer (gs-fw-010) in the past two quarters — trimming the opening and moving the named-service-team commitment to the first sentence. Downstream edit rate on this pair is 41%, the highest in the firmwide library. The proposed rewrite incorporates the convergent structure without changing substance.",
+    "qaId": "gs-fw-010",
+    "proposedQuestion": "Describe your client reporting capabilities, including standard reporting frequency and customization.",
+    "proposedAnswer": "Each institutional relationship is supported by a named client service team. Standard reporting includes a monthly statement of holdings, transactions, and performance, and a quarterly investment review covering positioning, attribution, risk characteristics, and market outlook, delivered through a secure client portal with entitlement-based access for client staff, consultants, and custodians. Reporting can be customized in content, frequency, and format — including client-defined templates and data feeds to consultant databases — at no additional cost for standard customizations.",
+    "proposedDataPoints": null,
+    "provenance": {
+      "sources": ["17 adviser edit events across 12 RFP responses, Q1–Q2 2026", "Advisers: M. Chen, D. Whitmore, R. Osei, T. Lindqvist"],
+      "sampleSize": "n=4 advisers with convergent edits; 41% downstream edit rate (17 of 41 uses)",
+      "signal": "Downstream edit pattern, firmwide client service topic"
+    },
+    "status": "new",
+    "dismissReason": null
+  }
+]

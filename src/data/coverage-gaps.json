@@ -1,0 +1,24 @@
+[
+  {
+    "id": "gap-seed-001",
+    "questionText": "Describe your securities lending program and revenue-sharing arrangements for separate accounts.",
+    "rfpId": "rfp-archive-cascade",
+    "rfpName": "Cascade County Employees' Retirement (2025)",
+    "questionId": "archive-q-17",
+    "assetClass": "fixed_income",
+    "raisedBy": "System — NEEDS CONTENT routing",
+    "raisedDate": "2025-11-04",
+    "status": "resolved"
+  },
+  {
+    "id": "gap-seed-002",
+    "questionText": "Detail your trade error policy, including how errors are identified, corrected, and reimbursed.",
+    "rfpId": "rfp-archive-pinewood",
+    "rfpName": "Pinewood State Teachers' Plan (2024)",
+    "questionId": "archive-q-31",
+    "assetClass": "fixed_income",
+    "raisedBy": "System — NEEDS CONTENT routing",
+    "raisedDate": "2026-05-22",
+    "status": "drafting"
+  }
+]

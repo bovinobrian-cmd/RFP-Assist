@@ -1,0 +1,79 @@
+{
+  "rulebookVersion": "2026.2",
+  "standardDisclosure": "This material is provided for institutional use only and does not constitute investment advice or an offer of any security. Opinions and data are as of the dates indicated and subject to change without notice.",
+  "performanceDisclosure": "Past performance is not a guarantee of future results.",
+  "rules": [
+    {
+      "id": "rule-promissory",
+      "name": "Promissory language",
+      "severity": "Block",
+      "kind": "phrase",
+      "patterns": [
+        "guarantee",
+        "guaranteed",
+        "we ensure",
+        "will deliver",
+        "will achieve",
+        "will outperform",
+        "assure",
+        "cannot lose"
+      ],
+      "rationale": "Language that promises a future outcome or certainty is prohibited in institutional marketing material. Regulators treat promissory statements as misleading regardless of intent.",
+      "suggestion": "Restate as an objective or expectation — e.g. \"we seek to\", \"our objective is\", or describe the historical practice without promising continuation."
+    },
+    {
+      "id": "rule-perf-disclosure",
+      "name": "Performance claim without disclosure",
+      "severity": "Block",
+      "kind": "performance_disclosure",
+      "patterns": [
+        "outperform",
+        "outperformed",
+        "outperforming",
+        "annualized",
+        "basis points of excess return",
+        "excess return",
+        "top quartile",
+        "ranked"
+      ],
+      "requiredDisclosure": "Past performance is not a guarantee of future results.",
+      "rationale": "Any answer presenting historical performance, excess return, or peer ranking must carry the past-performance disclosure in the same answer.",
+      "suggestion": "Append the standard disclosure: \"Past performance is not a guarantee of future results.\""
+    },
+    {
+      "id": "rule-superlative",
+      "name": "Unsubstantiated superlative",
+      "severity": "Flag",
+      "kind": "phrase",
+      "patterns": [
+        "best-in-class",
+        "best in class",
+        "world-class",
+        "unparalleled",
+        "unmatched",
+        "market-leading",
+        "industry-leading",
+        "second to none"
+      ],
+      "rationale": "Superlatives require objective, sourced substantiation. Unsourced superlatives are routinely challenged in consultant due diligence and by compliance reviewers.",
+      "suggestion": "Replace with a specific, verifiable statement (team size, tenure, assets, ratings) or remove the superlative."
+    },
+    {
+      "id": "rule-stale-data",
+      "name": "Stale as-of data",
+      "severity": "Flag",
+      "kind": "stale_data",
+      "maxAgeMonths": 12,
+      "rationale": "Quantitative data points older than 12 months must be refreshed or explicitly justified before inclusion in a live response.",
+      "suggestion": "Refresh the figure from the current factsheet, or ask the data steward to update the golden-source data point."
+    },
+    {
+      "id": "rule-std-disclosure",
+      "name": "Standard disclosures appended",
+      "severity": "Info",
+      "kind": "document_disclosure",
+      "rationale": "Every exported response document must close with the firm's standard institutional disclosures. The export template appends them automatically.",
+      "suggestion": "No action required — the standard disclosure block is included on export."
+    }
+  ]
+}
