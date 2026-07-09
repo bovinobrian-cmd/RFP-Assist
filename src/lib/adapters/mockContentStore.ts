@@ -3,7 +3,7 @@ import type { QaPair } from "../types";
 import goldenData from "@/data/golden-source.json";
 import { simulateLatency } from "../util";
 
-const pairs = goldenData as QaPair[];
+const pairs = goldenData as unknown as QaPair[];
 
 export const mockContentStoreAdapter: ContentStoreAdapter = {
   async listQaPairs() {
