@@ -9,6 +9,7 @@
 
 import type {
   AdviserHistoryEntry,
+  ConfidenceBand,
   DraftAnswer,
   GenerationTier,
   QaPair,
@@ -17,6 +18,29 @@ import type {
 
 /** Below this retrieval confidence, a question routes to NEEDS CONTENT. */
 export const MATCH_CONFIDENCE_THRESHOLD = 0.6;
+
+/** At or above this retrieval confidence, a match counts as high confidence. */
+export const CONFIDENCE_HIGH_THRESHOLD = 0.85;
+
+/**
+ * Confidence band shown throughout the workspace facelift: high maps to
+ * positive, medium to caution, low to critical. Tier-4 (NEEDS CONTENT) is
+ * always low regardless of the raw retrieval score.
+ */
+export function confidenceBand(matchConfidence: number, tier?: GenerationTier): ConfidenceBand {
+  if (tier === 4 || matchConfidence < MATCH_CONFIDENCE_THRESHOLD) return "low";
+  if (matchConfidence < CONFIDENCE_HIGH_THRESHOLD) return "medium";
+  return "high";
+}
+
+/**
+ * Band predicted from parsing signals alone — used by the intake dashboard
+ * before generation has run for an RFP.
+ */
+export function predictedBand(question: RfpQuestion): ConfidenceBand {
+  if (!question.matchedGoldenId && question.matchConfidence < MATCH_CONFIDENCE_THRESHOLD) return "low";
+  return confidenceBand(question.matchConfidence);
+}
 
 export function generateAnswer(
   question: RfpQuestion,
@@ -77,6 +101,9 @@ function draft(
     questionId: question.id,
     tier,
     text,
+    prevText: null,
+    routed: false,
+    aiDraft: null,
     goldenText: null,
     goldenId: null,
     historyId: null,

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "sf-ridgeline",
+    "kind": "DDQ",
+    "issuer": "Ridgeline County Employees' Retirement System",
+    "shortName": "Ridgeline",
+    "detail": "Operational Due Diligence Questionnaire · Core Fixed Income · via Cambria Consulting",
+    "wireRef": "SF-88412",
+    "mandate": "Operational Due Diligence Questionnaire — Core Fixed Income",
+    "assetClass": "fixed_income",
+    "vehicle": "Separate account",
+    "aum": "$4.1B plan assets",
+    "mandateSize": "$220M",
+    "deadline": "2026-09-30",
+    "consultant": "Cambria Consulting",
+    "contact": "odd@cambriaconsulting.example — Operational Due Diligence Team",
+    "channel": "Salesforce mandate wire (Cambria)",
+    "crmAccountId": "crm-ridgeline",
+    "assignedAdviserId": "adv-chen"
+  },
+  {
+    "id": "sf-alberta",
+    "kind": "RFP",
+    "issuer": "Alberta Provincial Workers' Pension",
+    "shortName": "Alberta PWP",
+    "detail": "Global Equity — Manager Search · $410M · matched to open Salesforce opportunity",
+    "wireRef": "SF-88437",
+    "mandate": "Global Equity — Manager Search",
+    "assetClass": "global_equity",
+    "vehicle": "Pooled fund",
+    "aum": "$11.7B plan assets",
+    "mandateSize": "$410M",
+    "deadline": "2026-10-09",
+    "consultant": null,
+    "contact": "investments@albertapwp.example — Manager Research",
+    "channel": "Salesforce mandate wire (direct)",
+    "crmAccountId": "crm-alberta",
+    "assignedAdviserId": "adv-whitmore"
+  }
+]

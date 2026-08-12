@@ -1,13 +1,15 @@
 import type { CrmAdapter } from "./index";
-import type { AdviserHistoryEntry, CrmAccount, Persona } from "../types";
+import type { AdviserHistoryEntry, CrmAccount, IntakeItem, Persona } from "../types";
 import crmData from "@/data/crm.json";
 import personaData from "@/data/personas.json";
 import historyData from "@/data/adviser-history.json";
+import intakeData from "@/data/intake-queue.json";
 import { simulateLatency } from "../util";
 
 const accounts = crmData as CrmAccount[];
 const personas = personaData as Persona[];
 const history = historyData as AdviserHistoryEntry[];
+const intakeQueue = intakeData as IntakeItem[];
 
 export const mockCrmAdapter: CrmAdapter = {
   async getAccount(accountId) {
@@ -21,5 +23,9 @@ export const mockCrmAdapter: CrmAdapter = {
   async getAdviserHistory(adviserId) {
     await simulateLatency(100);
     return history.filter((h) => h.adviserId === adviserId);
+  },
+  async listIntakeQueue() {
+    await simulateLatency(140);
+    return intakeQueue;
   },
 };

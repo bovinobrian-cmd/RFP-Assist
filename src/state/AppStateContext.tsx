@@ -13,6 +13,8 @@ import type {
   CrmAccount,
   DraftAnswer,
   EnrichmentCard,
+  GenAiAction,
+  IntakeItem,
   Persona,
   QaPair,
   ReviewItem,
@@ -24,6 +26,7 @@ import {
   mockContentStoreAdapter,
   mockCrmAdapter,
   mockRfpSourceAdapter,
+  mockTonalityAdapter,
 } from "@/lib/adapters";
 import { generateAnswer } from "@/lib/generation";
 import { overallOutcome } from "@/lib/compliance";
@@ -33,6 +36,8 @@ import reviewSeed from "@/data/review-queue.json";
 import enrichmentSeed from "@/data/enrichment.json";
 import { uid } from "@/lib/util";
 
+export type PanelTab = "answer" | "doc";
+
 export interface RfpWorkState {
   answers: Record<string, DraftAnswer>;
   generation: "idle" | "running" | "done";
@@ -41,6 +46,13 @@ export interface RfpWorkState {
   generatedCount: number;
   findings: ComplianceFinding[];
   scanState: "idle" | "running" | "done";
+  /** Question highlighted in the document and shown in the side panel. */
+  selectedQuestionId: string | null;
+  panelTab: PanelTab;
+  /** GenAI action in flight for the selected question ("draft" = tier-4 AI draft). */
+  genAiWorking: GenAiAction | "draft" | null;
+  /** Confirmation line after the last GenAI rewrite (cleared on select/undo). */
+  lastGenAiNote: string | null;
 }
 
 interface AppState {
@@ -52,14 +64,23 @@ interface AppState {
   crmAccounts: Record<string, CrmAccount>;
   qaPairs: QaPair[];
   work: Record<string, RfpWorkState>;
+  salesforceQueue: IntakeItem[];
   coverageGaps: CoverageGap[];
   reviewQueue: ReviewItem[];
   enrichmentCards: EnrichmentCard[];
+  // Intake dashboard actions
+  startIntake: (itemId: string) => Promise<void>;
   // Sales workspace actions
   generateForRfp: (rfpId: string) => Promise<void>;
   updateAnswerText: (rfpId: string, questionId: string, text: string) => void;
   revertAnswer: (rfpId: string, questionId: string) => void;
   acceptAnswer: (rfpId: string, questionId: string, accepted: boolean) => void;
+  selectQuestion: (rfpId: string, questionId: string) => void;
+  setPanelTab: (rfpId: string, tab: PanelTab) => void;
+  runGenAi: (rfpId: string, questionId: string, action: GenAiAction) => Promise<void>;
+  undoGenAi: (rfpId: string, questionId: string) => void;
+  generateAiDraft: (rfpId: string, questionId: string) => Promise<void>;
+  routeQuestion: (rfpId: string, questionId: string) => void;
   runCompliance: (rfpId: string) => Promise<void>;
   applyAutoFix: (rfpId: string, findingId: string) => void;
   acknowledgeFlag: (rfpId: string, findingId: string, reason: string) => void;
@@ -81,6 +102,10 @@ const emptyWork = (): RfpWorkState => ({
   generatedCount: 0,
   findings: [],
   scanState: "idle",
+  selectedQuestionId: null,
+  panelTab: "answer",
+  genAiWorking: null,
+  lastGenAiNote: null,
 });
 
 export function AppStateProvider({ children }: { children: React.ReactNode }) {
@@ -91,6 +116,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
   const [crmAccounts, setCrmAccounts] = useState<Record<string, CrmAccount>>({});
   const [qaPairs, setQaPairs] = useState<QaPair[]>([]);
   const [work, setWork] = useState<Record<string, RfpWorkState>>({});
+  const [salesforceQueue, setSalesforceQueue] = useState<IntakeItem[]>([]);
   const [coverageGaps, setCoverageGaps] = useState<CoverageGap[]>(gapSeed as CoverageGap[]);
   const [reviewQueue, setReviewQueue] = useState<ReviewItem[]>(reviewSeed as ReviewItem[]);
   const [enrichmentCards, setEnrichmentCards] = useState<EnrichmentCard[]>(enrichmentSeed as EnrichmentCard[]);
@@ -99,9 +125,10 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const [rfpList, pairs] = await Promise.all([
+      const [rfpList, pairs, queue] = await Promise.all([
         mockRfpSourceAdapter.listRfps(),
         mockContentStoreAdapter.listQaPairs(),
+        mockCrmAdapter.listIntakeQueue(),
       ]);
       const accountIds = [...new Set(rfpList.map((r) => r.crmAccountId))];
       const adviserIds = [...new Set(rfpList.map((r) => r.assignedAdviserId))];
@@ -114,6 +141,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       if (cancelled) return;
       setRfps(rfpList);
       setQaPairs(pairs);
+      setSalesforceQueue(queue);
       setCrmAccounts(Object.fromEntries(accounts.filter(Boolean).map((a) => [a!.id, a!])));
       setPersonas([...advisers.filter(Boolean), steward].filter(Boolean) as Persona[]);
       historiesRef.current = Object.fromEntries(adviserIds.map((id, i) => [id, histories[i]]));
@@ -196,8 +224,6 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
             ...w.answers,
             [questionId]: { ...a, text, edited: text !== (a.reverted ? a.goldenText : undefined) && true, reverted: false },
           },
-          scanState: "idle",
-          findings: [],
         };
       });
     },
@@ -221,8 +247,6 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
               provenanceNote: `Reverted to approved golden source ${a.goldenId} — now the unmodified default answer.`,
             },
           },
-          scanState: "idle",
-          findings: [],
         };
       });
     },
@@ -238,6 +262,160 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       });
     },
     [patchWork]
+  );
+
+  const selectQuestion = useCallback(
+    (rfpId: string, questionId: string) => {
+      patchWork(rfpId, { selectedQuestionId: questionId, panelTab: "answer", lastGenAiNote: null });
+    },
+    [patchWork]
+  );
+
+  const setPanelTab = useCallback(
+    (rfpId: string, tab: PanelTab) => {
+      patchWork(rfpId, { panelTab: tab });
+    },
+    [patchWork]
+  );
+
+  const runGenAi = useCallback(
+    async (rfpId: string, questionId: string, action: GenAiAction) => {
+      const rfp = rfps.find((r) => r.id === rfpId);
+      const answer = work[rfpId]?.answers[questionId];
+      if (!rfp || !answer || !answer.text.trim() || work[rfpId]?.genAiWorking) return;
+
+      patchWork(rfpId, { genAiWorking: action, lastGenAiNote: null });
+      const adviser = personas.find((p) => p.id === rfp.assignedAdviserId) ?? null;
+      const golden = answer.goldenId ? qaPairs.find((p) => p.id === answer.goldenId) : undefined;
+      const next = await mockTonalityAdapter.rewrite(action, answer.text, {
+        adviser,
+        toneVariant: golden?.tone_variants[rfp.assignedAdviserId] ?? null,
+      });
+      const note =
+        action === "polish"
+          ? "Polished for clarity — substance preserved"
+          : action === "match_voice"
+            ? `Rephrased to ${adviser ? `${adviser.name}'s` : "your"} voice — substance unchanged`
+            : `Made ${action} — golden-source substance preserved`;
+      patchWork(rfpId, (w) => {
+        const a = w.answers[questionId];
+        if (!a) return { genAiWorking: null };
+        return {
+          genAiWorking: null,
+          lastGenAiNote: note,
+          answers: { ...w.answers, [questionId]: { ...a, prevText: a.text, text: next, edited: a.edited || next !== a.text } },
+        };
+      });
+    },
+    [rfps, work, personas, qaPairs, patchWork]
+  );
+
+  const undoGenAi = useCallback(
+    (rfpId: string, questionId: string) => {
+      patchWork(rfpId, (w) => {
+        const a = w.answers[questionId];
+        if (!a || a.prevText === null) return {};
+        return {
+          lastGenAiNote: null,
+          answers: { ...w.answers, [questionId]: { ...a, text: a.prevText, prevText: null } },
+        };
+      });
+    },
+    [patchWork]
+  );
+
+  const generateAiDraft = useCallback(
+    async (rfpId: string, questionId: string) => {
+      const rfp = rfps.find((r) => r.id === rfpId);
+      const question = rfp?.sections.flatMap((s) => s.questions).find((q) => q.id === questionId);
+      if (!rfp || !question || work[rfpId]?.genAiWorking) return;
+
+      patchWork(rfpId, { genAiWorking: "draft", lastGenAiNote: null });
+      const text = await mockTonalityAdapter.generateDraft(question);
+      patchWork(rfpId, (w) => {
+        const a = w.answers[questionId];
+        if (!a) return { genAiWorking: null };
+        return {
+          genAiWorking: null,
+          answers: { ...w.answers, [questionId]: { ...a, text, aiDraft: "unvalidated" } },
+        };
+      });
+    },
+    [rfps, work, patchWork]
+  );
+
+  const routeQuestion = useCallback(
+    (rfpId: string, questionId: string) => {
+      const rfp = rfps.find((r) => r.id === rfpId);
+      const question = rfp?.sections.flatMap((s) => s.questions).find((q) => q.id === questionId);
+      if (!rfp || !question) return;
+      const adviser = personas.find((p) => p.id === rfp.assignedAdviserId);
+
+      patchWork(rfpId, (w) => {
+        const a = w.answers[questionId];
+        if (!a) return {};
+        return {
+          answers: {
+            ...w.answers,
+            [questionId]: { ...a, routed: true, aiDraft: a.aiDraft === "unvalidated" ? "pending_validation" : a.aiDraft },
+          },
+        };
+      });
+      // Routing feeds the Steward Hub coverage-gap queue (tier-4 questions may
+      // already have an entry from generation-time NEEDS CONTENT routing).
+      setCoverageGaps((prev) =>
+        prev.some((g) => g.questionId === questionId)
+          ? prev
+          : [
+              {
+                id: uid("gap"),
+                questionText: question.text,
+                rfpId: rfp.id,
+                rfpName: `${rfp.shortName} — ${rfp.mandate}`,
+                questionId,
+                assetClass: rfp.assetClass,
+                raisedBy: `${adviser?.name ?? "Adviser"} — routed to ${question.specialist ?? "specialist"}`,
+                raisedDate: new Date().toISOString().slice(0, 10),
+                status: "open",
+              },
+              ...prev,
+            ]
+      );
+    },
+    [rfps, personas, patchWork]
+  );
+
+  const startIntake = useCallback(
+    async (itemId: string) => {
+      const item = salesforceQueue.find((q) => q.id === itemId);
+      if (!item) return;
+      setSalesforceQueue((prev) => prev.filter((q) => q.id !== itemId));
+      const rfp: Rfp = {
+        id: `rfp-${item.id}`,
+        kind: item.kind,
+        issuer: item.issuer,
+        shortName: item.shortName,
+        mandate: item.mandate,
+        assetClass: item.assetClass,
+        vehicle: item.vehicle,
+        aum: item.aum,
+        mandateSize: item.mandateSize,
+        deadline: item.deadline,
+        received: new Date().toISOString().slice(0, 10),
+        consultant: item.consultant,
+        contact: item.contact,
+        channel: item.channel,
+        crmAccountId: item.crmAccountId,
+        assignedAdviserId: item.assignedAdviserId,
+        status: "new",
+        sections: [], // populated once the questionnaire parse completes
+      };
+      setRfps((prev) => [rfp, ...prev]);
+      setWork((prev) => ({ ...prev, [rfp.id]: emptyWork() }));
+      const account = await mockCrmAdapter.getAccount(item.crmAccountId);
+      if (account) setCrmAccounts((prev) => ({ ...prev, [account.id]: account }));
+    },
+    [salesforceQueue]
   );
 
   const runCompliance = useCallback(
@@ -437,13 +615,21 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       crmAccounts,
       qaPairs,
       work,
+      salesforceQueue,
       coverageGaps,
       reviewQueue,
       enrichmentCards,
+      startIntake,
       generateForRfp,
       updateAnswerText,
       revertAnswer,
       acceptAnswer,
+      selectQuestion,
+      setPanelTab,
+      runGenAi,
+      undoGenAi,
+      generateAiDraft,
+      routeQuestion,
       runCompliance,
       applyAutoFix,
       acknowledgeFlag,
@@ -454,7 +640,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       actionEnrichmentCard,
       setGapStatus,
     }),
-    [loading, personas, activePersonaId, rfps, crmAccounts, qaPairs, work, coverageGaps, reviewQueue, enrichmentCards, generateForRfp, updateAnswerText, revertAnswer, acceptAnswer, runCompliance, applyAutoFix, acknowledgeFlag, markExported, submitToReview, approveReviewItem, rejectReviewItem, actionEnrichmentCard, setGapStatus]
+    [loading, personas, activePersonaId, rfps, crmAccounts, qaPairs, work, salesforceQueue, coverageGaps, reviewQueue, enrichmentCards, startIntake, generateForRfp, updateAnswerText, revertAnswer, acceptAnswer, selectQuestion, setPanelTab, runGenAi, undoGenAi, generateAiDraft, routeQuestion, runCompliance, applyAutoFix, acknowledgeFlag, markExported, submitToReview, approveReviewItem, rejectReviewItem, actionEnrichmentCard, setGapStatus]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

@@ -33,6 +33,14 @@
   --color-info: #33566e;
   --color-info-tint: #e9eff4;
 
+  /* NEW (workspace facelift): lightened semantic dots legible on the ink header */
+  --color-positive-bright: #6fae8e;
+  --color-caution-bright: #d9b26a;
+  --color-critical-bright: #d98b80;
+
+  /* NEW (workspace facelift): desk surface behind the authoring document page */
+  --color-doc-desk: #eceae5;
+
   /* Provenance tiers */
   --color-tier1: #33566e; /* adviser history — steel blue */
   --color-tier1-tint: #e9eff4;

@@ -10,10 +10,14 @@ personnel, clients, and performance numbers are invented for the demo.
 
 ## What it demonstrates
 
-**Sales Workspace** — RFP inbox (status pipeline, deadline countdown, client/prospect
-badge, assigned adviser) → RFP detail with parsed metadata header and Salesforce match
-panel → provenance-first draft generation → question-by-question review → automated
-compliance gate → branded DOCX/PDF export.
+**Sales Workspace** — intake dashboard fed by Salesforce (stat cards, mandate-wire
+intake queue with one-click *Start intake*, pipeline list with stage stepper, confidence
+coverage bars, and deadline AT RISK / WATCH / ON TRACK status) → document-first
+authoring workspace: the client's questionnaire rendered as received with answers
+drafted in place, a per-question confidence heatmap rail, and a side panel with
+substance-preserving GenAI actions (Longer / Shorter / Polish / Match voice), specialist
+routing, a tier-4 AI-draft guardrail, an always-on compliance agent, and export gated
+behind PASS — including export in the client's own format.
 
 Every answer carries a provenance chip from the PRD §7 four-tier decision logic:
 
@@ -41,10 +45,10 @@ locked until the outcome is PASS (Blocks fixed, Flags acknowledged with a reason
 
 ## Suggested demo path (~3 minutes)
 
-1. **Sales Workspace** → open the SCPERS RFP and watch it pre-fill with visible provenance (90% auto-filled).
-2. On **C.1** (philosophy), click *View diff* to see the tonality adjustment, then *Use default* to revert to golden source.
-3. Click *Run compliance review* → two Blocks surface in the adviser-history answers (E.1, E.3). Click *Apply suggested fix* on each; acknowledge the two Flags with a reason → **PASS**.
-4. *Download DOCX* / *Download PDF* — the branded response document.
+1. **Sales Workspace** → click *Start intake* on a Salesforce mandate wire and watch it join the pipeline, then open the SCPERS RFP: the questionnaire pre-fills in place with visible provenance, and the supervisory agent scans automatically.
+2. Click **E.3** (fees) in the document or the confidence heatmap → try *✦ Shorter* or *✦ Match voice* (substance stays locked to golden source; one-click *Undo*), then *Route to Fee Committee*.
+3. On **E.4** (client references, `NEEDS CONTENT`), click *✦ Generate AI draft to start from* — the bracketed draft locks export until the SME validates it; *Send draft for validation*.
+4. Open the **Document review** tab → *Apply suggested fix* on the Blocks, acknowledge the Flags with a reason → **PASS** → *Export in client's format (DOCX)*, or the branded DOCX/PDF.
 5. Switch to the **Data Steward Hub** → *Smart Enrichment* → accept the win-driven "Winning variant" card → it appears in the *Review Queue* → open it, view the diff, *Approve* → golden source version bumps with full history.
 6. *Coverage Gaps* now contains the three `NEEDS CONTENT` questions routed from SCPERS.
 
@@ -54,7 +58,8 @@ State is in-memory by design — refresh the page to reset and re-run the demo.
 
 - Next.js (App Router) + TypeScript + Tailwind CSS 4. No backend; all data from seed JSON.
 - Every external system sits behind an adapter interface (`src/lib/adapters/`):
-  `CrmAdapter`, `ContentStoreAdapter`, `RfpSourceAdapter`, `ComplianceAdapter` — mock
+  `CrmAdapter`, `ContentStoreAdapter`, `RfpSourceAdapter`, `ComplianceAdapter`,
+  `TonalityAdapter` (GenAI rewrites + AI drafts) — mock
   implementations only, with seams shaped for production connectors (async, domain-typed).
 - Brand tokens live in a single theme file: `src/theme/theme.css`. No hardcoded colors elsewhere.
 - Q&A seed data (`src/data/golden-source.json`) is a literal instance of the PRD §9.1 schema.

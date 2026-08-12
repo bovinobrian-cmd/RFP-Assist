@@ -33,6 +33,96 @@ function answeredQuestions(input: ExportInput) {
   }));
 }
 
+/**
+ * Client-format export: writes the drafted answers back into the questionnaire
+ * exactly as received — original numbering, headings, and layout — rather than
+ * generating a branded response document. Standard disclosures are appended.
+ * Production: template into the parsed source docx; the prototype rebuilds the
+ * received layout from the parse structure.
+ */
+export async function exportClientDocx(input: ExportInput): Promise<void> {
+  const { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } = await import("docx");
+  const { saveAs } = await import("file-saver");
+  const { rfp } = input;
+
+  const children: InstanceType<typeof Paragraph>[] = [
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 120 },
+      children: [
+        new TextRun({
+          text: rfp.kind === "DDQ" ? "DUE DILIGENCE QUESTIONNAIRE" : "REQUEST FOR PROPOSAL",
+          font: "Helvetica",
+          size: 18,
+          color: BRAND.faint,
+          allCaps: true,
+        }),
+      ],
+    }),
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 100 },
+      children: [new TextRun({ text: rfp.issuer, font: "Georgia", size: 36, color: BRAND.ink })],
+    }),
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 400 },
+      children: [
+        new TextRun({
+          text: `${rfp.mandate} — Due ${formatDate(rfp.deadline)}`,
+          font: "Georgia",
+          size: 22,
+          italics: true,
+          color: BRAND.ink,
+        }),
+      ],
+    }),
+  ];
+
+  for (const section of rfp.sections) {
+    children.push(
+      new Paragraph({
+        spacing: { before: 360, after: 200 },
+        border: { bottom: { style: BorderStyle.SINGLE, size: 12, color: BRAND.ink } },
+        children: [new TextRun({ text: section.title, font: "Georgia", size: 26, bold: true, color: BRAND.ink })],
+      })
+    );
+    for (const q of section.questions) {
+      const answer = input.answers[q.id];
+      children.push(
+        new Paragraph({
+          spacing: { before: 240, after: 100 },
+          children: [new TextRun({ text: `${q.number}  ${q.text}`, font: "Georgia", size: 22, bold: true, color: BRAND.ink })],
+        }),
+        new Paragraph({
+          spacing: { after: 160 },
+          children: [
+            new TextRun({ text: answer?.text.trim() ? answer.text : " ", font: "Georgia", size: 21, color: BRAND.ink }),
+          ],
+        })
+      );
+    }
+  }
+
+  children.push(
+    new Paragraph({
+      spacing: { before: 480, after: 120 },
+      children: [new TextRun({ text: "Important Information", font: "Georgia", size: 24, bold: true, color: BRAND.ink })],
+    }),
+    new Paragraph({
+      children: [new TextRun({ text: input.standardDisclosure, font: "Georgia", size: 17, italics: true, color: BRAND.faint })],
+    })
+  );
+
+  const doc = new Document({
+    creator: BRAND.firm,
+    title: `${rfp.issuer} — ${rfp.mandate}`,
+    sections: [{ children }],
+  });
+  const blob = await Packer.toBlob(doc);
+  saveAs(blob, `${rfp.shortName}-Questionnaire-Response.docx`);
+}
+
 export async function exportDocx(input: ExportInput): Promise<void> {
   const { Document, HeadingLevel, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } = await import("docx");
   const { saveAs } = await import("file-saver");
