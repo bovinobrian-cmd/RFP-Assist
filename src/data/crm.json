@@ -27,5 +27,31 @@
       { "year": 2019, "mandate": "US Core Bond — $150M", "outcome": "won" },
       { "year": 2022, "mandate": "Multi-Asset Income — $120M", "outcome": "won" }
     ]
+  },
+  {
+    "id": "crm-ridgeline",
+    "name": "Ridgeline County Employees' Retirement System",
+    "type": "client",
+    "segment": "US Public Pension",
+    "relationshipOwner": "Margaret Chen",
+    "aumWithFirm": "$220M",
+    "productsHeld": ["US Core Bond — $220M"],
+    "lastInteraction": "2026-07-30 — Cambria operational due diligence kickoff call; questionnaire wire expected within two weeks.",
+    "notes": "Client since 2021. Cambria runs a triennial operational due diligence cycle on incumbent managers; this DDQ covers the core fixed income separate account. Relationship in good standing.",
+    "pastRfps": [
+      { "year": 2021, "mandate": "US Core Bond — $220M", "outcome": "won" }
+    ]
+  },
+  {
+    "id": "crm-alberta",
+    "name": "Alberta Provincial Workers' Pension",
+    "type": "prospect",
+    "segment": "Canadian Public Pension",
+    "relationshipOwner": "Daniel Whitmore",
+    "aumWithFirm": null,
+    "productsHeld": [],
+    "lastInteraction": "2026-06-05 — Global equity capabilities presentation to plan investment staff; opportunity opened in Salesforce.",
+    "notes": "Prospect. Plan is externalizing a $410M global equity sleeve previously run internally; the mandate wire matched to the open Salesforce opportunity from the June capabilities meeting.",
+    "pastRfps": []
   }
 ]

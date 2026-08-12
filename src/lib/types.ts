@@ -40,7 +40,32 @@ export interface CrmAccount {
   pastRfps: { year: number; mandate: string; outcome: "won" | "lost" | "no decision" }[];
 }
 
+/** Salesforce intake queue item (mandate wire awaiting intake). */
+export interface IntakeItem {
+  id: string;
+  kind: RfpKind;
+  issuer: string;
+  shortName: string;
+  /** One-line description shown under the issuer in the intake queue. */
+  detail: string;
+  /** Salesforce mandate-wire reference, e.g. "SF-88412". */
+  wireRef: string;
+  mandate: string;
+  assetClass: AssetClassCode;
+  vehicle: string;
+  aum: string;
+  mandateSize: string;
+  deadline: string; // ISO date
+  consultant: string | null;
+  contact: string;
+  channel: string;
+  crmAccountId: string;
+  assignedAdviserId: string;
+}
+
 // --- RFP ----------------------------------------------------------------------
+
+export type RfpKind = "RFP" | "DDQ";
 
 /** PRD §8.1 inbox pipeline: New → In Review → Compliance → Approved → Exported */
 export type RfpStatus = "new" | "in_review" | "compliance" | "approved" | "exported";
@@ -67,7 +92,14 @@ export interface RfpQuestion {
   matchedGoldenId: string | null;
   /** Retrieval confidence 0–1; below threshold routes to NEEDS CONTENT. */
   matchConfidence: number;
+  /** Specialist team a low-/medium-confidence answer routes to, if any. */
+  specialist?: string;
+  /** Why the answer should be routed — shown in the authoring side panel. */
+  routingReason?: string;
 }
+
+/** Retrieval-confidence band (high ≥ 0.85, medium 0.6–0.85, low < 0.6 or tier 4). */
+export type ConfidenceBand = "high" | "medium" | "low";
 
 export interface RfpSection {
   id: string;
@@ -77,6 +109,7 @@ export interface RfpSection {
 
 export interface Rfp {
   id: string;
+  kind: RfpKind;
   issuer: string;
   shortName: string;
   mandate: string;
@@ -176,10 +209,15 @@ export const TIER_CHIP: Record<GenerationTier, string> = {
   4: "NEEDS CONTENT",
 };
 
+/** Lifecycle of a generated-from-scratch AI draft (tier-4 guardrail). */
+export type AiDraftState = null | "unvalidated" | "pending_validation";
+
 export interface DraftAnswer {
   questionId: string;
   tier: GenerationTier;
   text: string;
+  /** Text before the last GenAI rewrite — enables one-click undo. */
+  prevText: string | null;
   /** Canonical golden-source text, kept for the diff + one-click revert (tier 2). */
   goldenText: string | null;
   goldenId: string | null;
@@ -188,8 +226,28 @@ export interface DraftAnswer {
   reverted: boolean;
   /** Adviser marked this answer reviewed (drives the % reviewed indicator). */
   accepted: boolean;
+  /** Sent to the question's specialist (Steward Hub coverage-gap queue). */
+  routed: boolean;
+  /** Non-null while an AI starting-point draft is awaiting SME validation — locks export. */
+  aiDraft: AiDraftState;
   provenanceNote: string;
 }
+
+// --- GenAI tonality actions -----------------------------------------------------
+
+/** Substance-preserving rewrite actions offered in the authoring side panel. */
+export type GenAiAction = "longer" | "shorter" | "polish" | "match_voice";
+
+export const GEN_AI_ACTION_LABEL: Record<GenAiAction, string> = {
+  longer: "Longer",
+  shorter: "Shorter",
+  polish: "Polish",
+  match_voice: "Match voice",
+};
+
+// --- Export -------------------------------------------------------------------
+
+export type ExportFormat = "client_docx" | "branded_docx" | "branded_pdf";
 
 // --- Compliance supervisory agent (PRD §10) ---------------------------------------
 

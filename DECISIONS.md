@@ -63,3 +63,27 @@ demo narrative (per the kickoff instruction). Reference: `RFP_Generator_PRD.md`.
     (sourced from the internal brand portal before any external showing).
 15. **All figures synthetic.** AUM, returns, fees, team counts, and personnel names are
     invented for the demo and resemble no real disclosure.
+
+## Workspace facelift (design handoff: intake dashboard + authoring workspace)
+16. **Always-on compliance agent.** The manual "Run compliance review" button is gone;
+    the supervisory scan fires automatically once generation completes, and manual edits
+    no longer clear findings (the handoff shows resolved findings persisting with a
+    strikethrough). Fix/acknowledge semantics and the PASS promotion are unchanged.
+17. **Flag acknowledgment kept.** The handoff mocks show only "Apply suggested fix", but
+    §10 requires Flags to be acknowledged with a reason for PASS — finding cards retain a
+    compact acknowledge control for Flags without an auto-fix (e.g. stale as-of data).
+18. **Specialist routing is seed data.** Routing targets and reasons ride on the parsed
+    question (`specialist`/`routingReason`), matching the handoff copy; tier-4 AI-draft
+    starting-point text is pre-authored per `contextKey` in the mock `TonalityAdapter` —
+    the same simulated-LLM pattern as `tone_variants`.
+19. **Three extra NEW tokens.** Besides the handoff's `--color-doc-desk`, lightened
+    semantic dot colors (`--color-*-bright`) were tokenized because the reference pills
+    use them on the ink header and components must not hardcode colors.
+20. **Nav labels stay.** The reference mocks show "In Process / Authoring / Data Steward
+    Hub" tabs, but the handoff README says "nav tabs as today" — the existing two-tab nav
+    ("Sales Workspace" / "Data Steward Hub") wins.
+21. **Design-mock data ignored.** The `.dc.html` demo rows (Helvetia, Bayview, 21/5/3
+    coverage) are illustrative; all dashboard numbers derive from the real seed RFPs.
+    The Salesforce intake queue items (Ridgeline DDQ, Alberta RFP) became seed data
+    behind `CrmAdapter.listIntakeQueue`, with CRM accounts so relationship chips resolve
+    after intake.

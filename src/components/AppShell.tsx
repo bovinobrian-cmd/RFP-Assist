@@ -11,24 +11,33 @@ const TABS = [
   { href: "/steward", label: "Data Steward Hub" },
 ];
 
+/** Authoring routes take over the full viewport — no page scroll, no footer. */
+const IMMERSIVE_ROUTE = /^\/sales\/[^/]+$/;
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const immersive = IMMERSIVE_ROUTE.test(pathname);
+  const authoringRfpId = immersive ? pathname.split("/")[2] : null;
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="bg-ink text-paper">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex items-center justify-between py-4">
+    <div className={classNames("flex flex-col", immersive ? "h-screen overflow-hidden" : "min-h-screen")}>
+      <header className="shrink-0 bg-ink text-paper">
+        <div className={classNames("px-7", !immersive && "mx-auto w-full max-w-[1360px]")}>
+          <div className="flex h-[52px] items-center justify-between">
             <div className="flex items-baseline gap-4">
-              <span className="font-display text-lg tracking-wide">
-                J.P. Morgan <span className="text-hairline-strong">Asset Management</span>
+              <span className="font-display text-lg tracking-[0.02em]">
+                Asset Management <span className="text-hairline-strong">Co.</span>
               </span>
-              <span className="hidden sm:inline text-[11px] uppercase tracking-[0.2em] text-ink-faint border-l border-ink-soft pl-4">
-                RFP Response Platform
+              <span className="hidden sm:inline border-l border-ink-soft pl-4 text-[11px] uppercase tracking-[0.2em] text-ink-faint">
+                RFP Assist
               </span>
             </div>
-            <PersonaSwitcher />
+            <div className="flex items-center gap-4">
+              {authoringRfpId ? <ComplianceAgentPill rfpId={authoringRfpId} /> : <SalesforcePill />}
+              <PersonaSwitcher />
+            </div>
           </div>
-          <nav className="flex gap-1 -mb-px" aria-label="Primary">
+          <nav className="-mb-px flex gap-1" aria-label="Primary">
             {TABS.map((tab) => {
               const active = pathname.startsWith(tab.href);
               return (
@@ -49,15 +58,56 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
       </header>
-      <main className="flex-1">
-        <div className="mx-auto max-w-7xl px-6 py-8">{children}</div>
-      </main>
-      <footer className="border-t border-hairline py-4">
-        <div className="mx-auto max-w-7xl px-6 text-[11px] text-ink-faint flex flex-wrap gap-x-6 gap-y-1">
-          <span>Prototype — all data synthetic. Not for client use.</span>
-          <span>Substance locked to golden source · compliance gated · human in the loop</span>
-        </div>
-      </footer>
+      {immersive ? (
+        <main className="flex min-h-0 flex-1 flex-col">{children}</main>
+      ) : (
+        <main className="flex-1">
+          <div className="mx-auto max-w-[1360px] px-7 py-8">{children}</div>
+        </main>
+      )}
+      {!immersive && (
+        <footer className="border-t border-hairline py-4">
+          <div className="mx-auto max-w-[1360px] px-7 text-[11px] text-ink-faint flex flex-wrap gap-x-6 gap-y-1">
+            <span>Prototype — all data synthetic. Not for client use.</span>
+            <span>Substance locked to golden source · compliance gated · human in the loop</span>
+          </div>
+        </footer>
+      )}
+    </div>
+  );
+}
+
+function SalesforcePill() {
+  return (
+    <div className="hidden md:flex items-center gap-2 rounded-full border border-ink-soft/60 px-3.5 py-[5px] text-xs text-hairline-strong">
+      <span className="h-[7px] w-[7px] rounded-full bg-positive-bright animate-pulse-dot" aria-hidden />
+      Salesforce connected
+    </div>
+  );
+}
+
+function ComplianceAgentPill({ rfpId }: { rfpId: string }) {
+  const { work } = useAppState();
+  const w = work[rfpId];
+  const open = (w?.findings ?? []).filter(
+    (f) => !f.resolved && !(f.severity === "Flag" && f.acknowledged)
+  );
+  const blocks = open.some((f) => f.severity === "Block");
+
+  let dot = "bg-positive-bright";
+  let label = "clear";
+  if (!w || w.scanState !== "done") {
+    dot = "bg-hairline-strong";
+    label = w?.scanState === "running" ? "scanning…" : "standing by";
+  } else if (open.length > 0) {
+    dot = blocks ? "bg-critical-bright" : "bg-caution-bright";
+    label = `${open.length} open`;
+  }
+
+  return (
+    <div className="hidden md:flex items-center gap-2 rounded-full border border-ink-soft/60 px-3 py-1 text-xs text-hairline-strong">
+      <span className={classNames("h-[7px] w-[7px] rounded-full animate-pulse-dot", dot)} aria-hidden />
+      Compliance agent · {label}
     </div>
   );
 }
